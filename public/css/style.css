@@ -1,0 +1,50 @@
+@keyframes animatedBackground {
+    0% { background-position: -0 85%; }
+    100% { background-position: -1350px 85%; }
+}
+
+@keyframes gradient {
+	0% { background-position: 50% 0%; }
+	50% { background-position: 50% 100%; }
+	100% { background-position: 50% 0%; }
+}
+
+html {
+	background: linear-gradient(180deg, #000000, #ffffff, #fffddc, #ffffff, #000000);
+	background-size: 400% 400%;
+	animation: gradient 50s ease infinite;
+	height: 100vh;
+}
+
+body {
+    background-image: url("/assets/images/Cityscape.png");
+    background-size: 200%;
+    background-repeat: no-repeat;
+    animation: animatedBackground 50s linear infinite;
+}
+
+main {
+    cursor: url("/assets/images/whitesparkle.png"), auto;
+}
+
+.hover-content {
+    padding: 5%;
+    border-radius: 25px;
+}
+
+.hover-content:hover {
+    color: black;
+    background-color: rgba(255, 255, 255, 0.85);
+    box-shadow: 0px 0px 50px 10px rgba(0,0,0,0.5);
+    opacity: 1;
+    z-index:555555;
+}
+
+.hover-content:hover h1 {
+    color: black;
+}
+
+.box:hover {
+    transform: scale(1.25);
+    z-index:555555;
+}

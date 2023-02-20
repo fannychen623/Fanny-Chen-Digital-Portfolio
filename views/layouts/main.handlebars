@@ -1,0 +1,104 @@
+<head>
+  <meta charset="UTF-8">
+  <title>Fanny Chen</title>
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/jass.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+
+<body>
+  <header class="header">
+    <nav class="navbar is-fixed-top p-2 is-black" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item is-size-3" href="#">
+          Fanny Chen
+        </a>
+    
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+    
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-end">
+          <a class="navbar-item" id="portfolio-link" href="/portfolio">
+            Portfolio
+          </a>
+          <a class="navbar-item" id="resume-link" href="/resume">
+            Resume
+          </a>
+          <a class="navbar-item" id="about-link" href="/about">
+            About
+          </a>
+          <a class="navbar-item">
+            <button class="button is-black is-responsive p-0 js-modal-trigger" data-target="modal-js-example">Contact Me</button>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+  <main>
+    {{{ body }}}
+  </main>
+
+  <footer class="footer p-3 has-background-black has-text-white">
+    <div class="content has-text-centered">
+      <p>
+        <p class="has-text-weight-semibold">Created by Fanny Chen</p>
+        <p>Last updated: February 2023</p>
+      </p>
+    </div>
+  </footer>
+
+  <div id="modal-js-example" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head has-background-grey-dark ">
+        <p class="modal-card-title has-text-white has-text-weight-semibold">Contact Me</p>
+        <button class="delete" aria-label="close"></button>
+      </header>
+      <section class="modal-card-body">
+        <table class="table is-hoverable is-fullwidth">
+          <tbody>
+            <tr>
+              <td><span style="font-size: 1.5em; color: rgb(80, 80, 80);"><i class="fa-solid fa-envelope"></i></span></td>
+              <td><strong>Email:</strong></td>
+              <td><a href="mailto:fannychen623@gmail.com">fannychen623@gmail.com</a></td>
+            </tr>
+            <tr>
+              <td><span style="font-size: 1.5em; color: rgb(80, 80, 80);"><i class="fa-brands fa-linkedin"></i></span></td>
+              <td><strong>LinkedIn:</strong></td>
+              <td><a href="https://www.linkedin.com/in/fanny23/">fanny23</a></td>
+            </tr>
+            <tr>
+              <td><span style="font-size: 1.5em; color: rgb(80, 80, 80);"><i class="fa-solid fa-mobile"></i></span></td>
+              <td><strong>Phone Number:</strong></td>
+              <td>(917)-815-8686</td>
+            </tr>
+            <tr>
+              <td><span style="font-size: 1.5em; color: rgb(80, 80, 80);"><i class="fa-solid fa-location-dot"></i></span></td>
+              <td><strong>Location:</strong></td>
+              <td>Brooklyn, NY</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <footer class="modal-card-foot has-background-grey-dark">
+        <div class="container">
+          <div class="field">
+            <button class="button has-text-white is-ghost is-pulled-right">Close</button>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  
+  <script src="/script.js"></script>
+  </body>
+</html>
