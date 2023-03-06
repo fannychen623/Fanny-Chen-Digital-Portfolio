@@ -47,4 +47,5 @@ main {
 .box:hover {
     transform: scale(1.25);
     z-index:555555;
+    border: 5px solid black;
 }

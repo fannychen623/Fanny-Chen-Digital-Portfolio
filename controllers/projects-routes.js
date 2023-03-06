@@ -2,6 +2,12 @@ const router = require('express').Router();
 // Here is where we provide hardcoded data to render dynamically
 const projects = [
   {
+    name: 'Share-A-Byte',
+    description: 'A recipe blog where you can create an account to add, view and favorite recipes. Connected to Open AI API to create random recipes.',
+    link: 'https://share-a-byte.herokuapp.com/',
+    image: '/assets/images/shareabyte.png',
+  },
+  {
     name: 'GIF ME MARVEL',
     description: 'Find GIFs and description of your favorite MARVEL character. Connected to the MARVEL API to fetch and output data.',
     link: 'https://mshaari.github.io/gif-me-marvel/',
