@@ -70,7 +70,7 @@ const projects = [
 ];
 
 router.get('/', async (req, res) => {
-  return res.render('portfolio', {projects});
+  return res.render('about');
 });
 
 router.get('/portfolio', async (req, res) => {
