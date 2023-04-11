@@ -12,7 +12,7 @@ export default function Contact() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
-    const [errorMessage, setErrorMessage] = useState('');
+    const [notification, setNotification] = useState('');
   
     const handleInputChange = (e) => {
       // Getting the value and name of the input which triggered the change
@@ -27,9 +27,7 @@ export default function Contact() {
       const { name, value } = e.target;
 
       if (!value) {
-        setErrorMessage('All fields are required');
-      // Alert the user their first and last name, clear the inputs
-      alert(`${name} is required.`);
+        setNotification(`${name} is required.`);
         // We want to exit out of this code block if something is wrong so that the user can correct it
         return;
       }
@@ -40,13 +38,13 @@ export default function Contact() {
       e.preventDefault();
   
       if (!validateEmail(email)) {
-        setErrorMessage('Email is invalid');
+        setNotification('Email is invalid');
         // We want to exit out of this code block if something is wrong so that the user can correct it
         return;
       }
 
       // Alert the user their first and last name, clear the inputs
-      alert(`Hi ${name}! Thank you for visiting and leaving a message.`);
+      setNotification(`Hi ${name}! Thank you for visiting and leaving a message.`);
       setName('');
       setEmail('');
       setMessage('');
@@ -84,9 +82,9 @@ export default function Contact() {
           Submit
         </button>
       </form>
-      {errorMessage && (
+      {notification && (
         <div>
-          <p className="error-text">{errorMessage}</p>
+          <p className="error-text">{notification}</p>
         </div>
       )}
     </div>

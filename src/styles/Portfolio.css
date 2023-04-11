@@ -20,9 +20,8 @@
     font-weight: bolder;
     text-align: center;
     padding: 1vh;
-    margin-bottom: 10vh;
     color: var(--shade2);
-    text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+    background-color: var(--shade4);
 }
 
 .portfolio img {
@@ -34,6 +33,7 @@
 .gallery {
     column-count: 4;
     column-gap: 5vw;
+    column-rule: 3px solid var(--shade1);
     font-size: 1.15vw;
 }
 
@@ -43,15 +43,28 @@
     margin-bottom: 5vh;
 }
 
-.gallery:nth-child(1) {
-    column-span: 5;
+.projectTitle {
+    font-size: 1.5vw;
+    color: var(--shade4);
+    -webkit-text-stroke: 0.25px var(--shade5);
+    background-color: var(--shade1);
+}
+
+.mainProject {
+    border: 5vh solid var(--shade1);
+    padding: 3vh;
+    margin: 5vh auto;
+    font-size: 1.75vw;
+}
+
+.mainProject img {
+    width: 35vw;
+    height: auto;
     margin-bottom: 5vh;
 }
 
-.projectTitle {
-    font-size: 1.5vw;
-    color: var(--shade2);
-    background-color: var(--shade4);
+.mainProject .projectTitle {
+    font-size: 3vw;
 }
 
 @media screen and (max-width: 820px) { 
@@ -79,5 +92,20 @@
         column-count: 1;
         padding-right: 7vw;
         font-size: 3vw;
+    }
+
+    .mainProject {
+        border: 1vh solid var(--shade1);
+        margin: 2vh;
+        padding: 1vh;
+        font-size: 3vw;
+    }
+
+    .mainProject img {
+        margin-bottom: 1vh;
+    }
+
+    .mainProject .projectTitle {
+        font-size: 4vw;
     }
 }
