@@ -72,6 +72,10 @@ self.__precacheManifest = [
     "url": "/Fanny-Chen-Digital-Portfolio/static/media/workdayscheduler.7317f6a6.png"
   },
   {
+    "revision": "448c34a56d699c29117adc64c43affeb",
+    "url": "/Fanny-Chen-Digital-Portfolio/static/media/glyphicons-halflings-regular.448c34a5.woff2"
+  },
+  {
     "revision": "f4769f9bdb7466be65088239c12046d1",
     "url": "/Fanny-Chen-Digital-Portfolio/static/media/glyphicons-halflings-regular.f4769f9b.eot"
   },
@@ -86,10 +90,6 @@ self.__precacheManifest = [
   {
     "revision": "89889688147bd7575d6327160d64e760",
     "url": "/Fanny-Chen-Digital-Portfolio/static/media/glyphicons-halflings-regular.89889688.svg"
-  },
-  {
-    "revision": "448c34a56d699c29117adc64c43affeb",
-    "url": "/Fanny-Chen-Digital-Portfolio/static/media/glyphicons-halflings-regular.448c34a5.woff2"
   },
   {
     "revision": "293b50cba9170b1b6bb3df6df693e652",

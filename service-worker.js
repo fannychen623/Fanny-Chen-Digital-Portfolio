@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Fanny-Chen-Digital-Portfolio/precache-manifest.fcf22eb3f621d0f9846a39248dc344c3.js"
+  "/Fanny-Chen-Digital-Portfolio/precache-manifest.aedabeed55ff7248e1fcb86fe65f7155.js"
 );
 
 workbox.clientsClaim();
