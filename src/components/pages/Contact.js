@@ -27,7 +27,7 @@ export default function Contact() {
       const { name, value } = e.target;
 
       if (!value) {
-        setNotification(`${name} is required.`);
+        setNotification(`${name} is required`);
         // We want to exit out of this code block if something is wrong so that the user can correct it
         return;
       }
@@ -37,6 +37,12 @@ export default function Contact() {
       // Preventing the default behavior of the form submit (which is to refresh the page)
       e.preventDefault();
   
+      if (!name || !email || !message) {
+        setNotification('Must fill out all fields to submit');
+        // We want to exit out of this code block if something is wrong so that the user can correct it
+        return;
+      }
+
       if (!validateEmail(email)) {
         setNotification('Email is invalid');
         // We want to exit out of this code block if something is wrong so that the user can correct it
@@ -44,7 +50,7 @@ export default function Contact() {
       }
 
       // Alert the user their first and last name, clear the inputs
-      setNotification(`Hi ${name}! Thank you for visiting and leaving a message.`);
+      setNotification(`Hi ${name}! Thank you for visiting and leaving a message!`);
       setName('');
       setEmail('');
       setMessage('');
