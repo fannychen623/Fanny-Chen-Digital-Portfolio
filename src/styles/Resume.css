@@ -1,0 +1,10 @@
+.resume {
+    height: fit-content;
+    text-align: center;
+    padding: 5vh;
+}
+
+iframe {
+    width: 50vw;
+    height: 100vh;
+}

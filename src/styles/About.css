@@ -57,7 +57,7 @@
     margin-top: -20px;
 }
 
-@media screen and (max-width: 768px) { 
+@media screen and (max-width: 820px) { 
     .aboutHead {
         display: block;
         margin-bottom: 3vh;
