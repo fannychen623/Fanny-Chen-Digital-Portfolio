@@ -1,0 +1,29 @@
+/* define color palette */
+:root {
+    --shade1: #ebb8b1;
+    --shade2: #f4e8e1;
+    --shade3: #c1c5cc;
+    --shade4: #6a859d;
+    --shade5: #020201;
+    --trans:  #98755400;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+@keyframes animatedBackground {
+    0% { background-position: -0 85%; }
+    100% { background-position: -1350px 85%; }
+}
+
+@keyframes gradient {
+	0% { background-position: 50% 0%; }
+	50% { background-position: 50% 100%; }
+	100% { background-position: 50% 0%; }
+}
+
+.base {
+	background: linear-gradient(0deg, var(--shade2), var(--shade3),  var(--shade4));
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
+	height: fit-content;
+}

@@ -1,0 +1,78 @@
+/* define color palette */
+:root {
+    --shade1: #ebb8b1;
+    --shade2: #f4e8e1;
+    --shade3: #c1c5cc;
+    --shade4: #6a859d;
+    --shade5: #020201;
+    --trans:  #98755400;
+}
+
+.about {
+    color: var(--shade5);
+    font-family: 'Quicksand', sans-serif;
+    padding: 5vh;
+}
+
+.aboutHead {
+    display: flex;
+    font-size: 1.25vw;
+    margin-bottom: 5vh;
+}
+
+.aboutHead img {
+    width: 50vh;
+    height: auto;
+}
+
+.aboutMain {
+    padding-left: 3vw;
+    padding-right: 2vw;
+}
+
+.aboutDetails {
+    column-count: 3;
+    column-gap: 5vw;
+    column-rule: 5px solid var(--shade4);
+    font-size: 1.15vw;
+}
+
+.background, .present, .funFacts {
+    page-break-inside: avoid;
+    column-span: 1;
+}
+
+.about h1 {
+    font-size: 2vw;
+    font-weight: bolder;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    color: var(--shade2);
+    background-color: var(--shade4);
+}
+
+.background {
+    margin-top: -20px;
+}
+
+@media screen and (max-width: 768px) { 
+    .aboutHead {
+        display: block;
+        margin-bottom: 3vh;
+        text-align: center;
+    }
+    .aboutHead img {
+        width: 30vh;
+        height: auto;
+        margin-bottom: 1vh;
+    }
+    .aboutMain {
+        padding: 0;
+        text-align: left;
+    }
+    .aboutDetails {
+        column-count: 1;
+    }
+}

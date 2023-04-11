@@ -1,0 +1,27 @@
+/* define color palette */
+:root {
+    --shade1: #ebb8b1;
+    --shade2: #f4e8e1;
+    --shade3: #c1c5cc;
+    --shade4: #6a859d;
+    --shade5: #020201;
+    --trans:  #98755400;
+}
+
+.home {
+    color: var(--shade4);
+    text-align: center;
+    height: 100vh;
+    padding-top: 15%;
+}
+
+.name {
+    display : flex;
+    align-items : center;
+    padding-left: 20vw;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 10vw;
+    height: 25vh;
+    background: var(--shade2);
+    text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+}

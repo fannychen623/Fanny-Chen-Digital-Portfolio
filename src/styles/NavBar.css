@@ -1,0 +1,20 @@
+/* define color palette */
+:root {
+    --shade1: #ebb8b1;
+    --shade2: #f4e8e1;
+    --shade3: #c1c5cc;
+    --shade4: #6a859d;
+    --shade5: #020201;
+    --trans:  #98755400;
+}
+
+.nav {
+    background-color: var(--shade4);
+    height: fit-content;
+    font-size: medium;
+}
+
+.nav-item a {
+    color: var(--shade2);
+    font-size: 1.25vw;
+}
