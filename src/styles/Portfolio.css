@@ -1,3 +1,4 @@
+/* styling for the Portfolio page */
 .portfolio {
     color: var(--shade5);
     font-family: 'Quicksand', sans-serif;
@@ -57,6 +58,7 @@
     font-size: 3vw;
 }
 
+/* styling for the mobile screen sizes */
 @media screen and (max-width: 820px) { 
     .portfolio {
         padding: 0;

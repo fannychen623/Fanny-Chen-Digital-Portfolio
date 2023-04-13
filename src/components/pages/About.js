@@ -1,10 +1,13 @@
+// import package and local style sheet
 import React from 'react';
 import '../../styles/About.css';
+// import avatar image from assets
 import Avatar from '../../assets/images/Avatar.JPG';
 
 export default function About() {
   return (
     <div className="about">
+      {/* section of avatar with general summary */}
       <div className="aboutHead">
         <figure>
           <img src={`${Avatar}`} alt="Avatar" />
@@ -29,6 +32,7 @@ export default function About() {
           </p>
         </div>
       </div>
+      {/* subsections of background, present, and fun facts */}
       <div className="aboutDetails">
         <div className="background">
           <h1>Background</h1>

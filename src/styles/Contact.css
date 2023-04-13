@@ -1,3 +1,4 @@
+/* styling for the Contact page */
 .contact {
     height: 100vh;
     padding: 5vh;
@@ -42,6 +43,7 @@ form {
     color: var(--shade5);
 }
 
+/* styling for the mobile screen sizes */
 @media screen and (max-width: 820px) { 
     .contact h1 {
         width: 70vw;

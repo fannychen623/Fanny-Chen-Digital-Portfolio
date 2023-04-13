@@ -1,55 +1,60 @@
+// import package and local style sheet
 import React, { useState } from 'react';
 import '../../styles/Contact.css';
 
+// function to validate the email input value is formatted correctly
 function validateEmail(email) {
   const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return re.test(String(email).toLowerCase());
 }
 
 export default function Contact() {
-
-    // Here we set two state variables for firstName and lastName using `useState`
+    // set state variables as blank for name, email message, and notifcation
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     const [notification, setNotification] = useState('');
   
+    // update state upon change
     const handleInputChange = (e) => {
-      // Getting the value and name of the input which triggered the change
+      // get the value and name of the input which triggered the change
       const { name, value } = e.target;
 
-      // Ternary statement that will call either setFirstName or setLastName based on what field the user is typing in
+      // call either setName, setEmail, or setMessage based on what field the user is typing in
       return name === 'name' ? setName(value) : name === 'email' ? setEmail(value) : setMessage(value)
     };
   
+    // display notifcation when focus is lost on input
     const handleLoseFocus = (e) => {
-      // Getting the value and name of the input which triggered the change
+      // get the value and name of the input which triggered the change
       const { name, value } = e.target;
 
+      // if the value is blank, call setNotification with appropriate message
       if (!value) {
         setNotification(`${name} is required`);
-        // We want to exit out of this code block if something is wrong so that the user can correct it
         return;
       }
     };
 
+    // event once the submit button is clicked
     const handleFormSubmit = (e) => {
-      // Preventing the default behavior of the form submit (which is to refresh the page)
+      // prevent the default behavior (refresh page) of the form submit
       e.preventDefault();
   
+      // if any field is empty, display notification by calling setNotification
       if (!name || !email || !message) {
         setNotification('Must fill out all fields to submit');
-        // We want to exit out of this code block if something is wrong so that the user can correct it
         return;
       }
 
+      // check that the value for email is in the correct format by calling validateEmail and passing in the input
+      // if it is not correct, call setNotification to display error message
       if (!validateEmail(email)) {
         setNotification('Email is invalid');
-        // We want to exit out of this code block if something is wrong so that the user can correct it
         return;
       }
 
-      // Alert the user their first and last name, clear the inputs
+      // setNotification for successful submit and clear the inputs
       setNotification(`Hi ${name}! Thank you for visiting and leaving a message!`);
       setName('');
       setEmail('');
@@ -57,9 +62,11 @@ export default function Contact() {
     };
 
   return (
+    // contact form
     <div className="contact">
       <h1>Contact Me!</h1>
       <form className="form">
+        {/* name input */}
         <input
           value={name}
           name="name"
@@ -68,6 +75,7 @@ export default function Contact() {
           type="text"
           placeholder="Name"
         />
+        {/* email input */}
         <input
           value={email}
           name="email"
@@ -76,6 +84,7 @@ export default function Contact() {
           type="text"
           placeholder="Email"
         />
+        {/* message input */}
         <input
           value={message}
           name="message"
@@ -84,10 +93,12 @@ export default function Contact() {
           type="text"
           placeholder="Message"
         />
+        {/* submit button */}
         <button type="button" onClick={handleFormSubmit}>
           Submit
         </button>
       </form>
+      {/* notification display */}
       {notification && (
         <div>
           <p className="error-text">{notification}</p>

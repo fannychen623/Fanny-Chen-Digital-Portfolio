@@ -1,3 +1,4 @@
+// project lists to map and render
 const projects = [
   {
     name: 'Share-A-Byte',

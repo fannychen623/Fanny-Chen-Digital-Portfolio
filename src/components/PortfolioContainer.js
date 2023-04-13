@@ -1,3 +1,4 @@
+// import package and local components
 import React, { useState } from 'react';
 import NavTabs from './NavTabs';
 import Footer from './Footer';
@@ -7,11 +8,13 @@ import Portfolio from './pages/Portfolio';
 import Resume from './pages/Resume';
 import Contact from './pages/Contact';
 
+// import general styling for all pages
 import '../styles/Base.css';
-
+// import projects that will populate the portfolio page
 import projects from '../projects';
 
 export default function PortfolioContainer() {
+  // set the default page on site launch
   const [currentPage, setCurrentPage] = useState('About');
 
   // This method is checking to see what the value of `currentPage` is. Depending on the value of currentPage, we return the corresponding component to render.
@@ -37,10 +40,11 @@ export default function PortfolioContainer() {
 
   return (
     <div className="base">
-      {/* We are passing the currentPage from state and the function to update it */}
+      {/* pass the currentPage from state and the function to update it */}
       <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} />
-      {/* Here we are calling the renderPage method which will return a component  */}
+      {/* call the renderPage method which will return a component  */}
       {renderPage()}
+      {/* add the footer to the page */}
       <Footer />
     </div>
   );

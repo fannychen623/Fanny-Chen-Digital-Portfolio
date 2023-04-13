@@ -1,3 +1,5 @@
+/* styling for all pages */
+
 /* define color palette */
 :root {
     --shade1: #ebb8b1;
@@ -8,13 +10,16 @@
     --trans:  #98755400;
 }
 
+/* import font used throughout pages */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 
+/* create background color transition/animation */
 @keyframes animatedBackground {
     0% { background-position: -0 85%; }
     100% { background-position: -1350px 85%; }
 }
 
+/* define transition gradient */
 @keyframes gradient {
 	0% { background-position: 50% 0%; }
 	50% { background-position: 50% 100%; }

@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# Fanny Chen - Digital Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Application Link:** [Fanny Chen](https://fannychen623.github.io/Fanny-Chen-Digital-Portfolio/)
 
-## Available Scripts
+**View:** [Table of Content](#table-of-content) / [Application Pages Preview](#application-pages-preview)
 
-In the project directory, you can run:
+**Application Preview:**
 
-### `npm start`
+![Fanny Chen](./src/assets/images/HomePage.png "Home Page")
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## **TABLE OF CONTENT**
 
-### `npm test`
+* [Descripton](#description)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* [Installation and Usage Instructions](#installation-and-usage-instructions)
 
-### `npm run build`
+* [App License](#app-license)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* [Contribution Guidelines](#contribution-guidelines)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* [Questions](#questions)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Description
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+> This is my digital portfolio created using react and gh-pages.
+> 
+> Find information regarding my background, projects, and contact on the site.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Installation and Usage Instructions 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+> No installation required. 
+> Access/view at - [Fanny Chen](https://fannychen623.github.io/Fanny-Chen-Digital-Portfolio/)
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## App License 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+> This app is not covered under a license.
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Contribution Guidelines 
 
-### Analyzing the Bundle Size
+> Application not accepting direct contribution.
+> However, any feedback is welcomed to be sent via the contact page on the site.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## Questions 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+> For more information and questions, please contact me below:
+> * <fannychen623@gmail.com> [(GitHub)](https://github.com/fannychen623)
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## **APPLICATION PAGES PREVIEW**
+### Home Page
+>![Home Page](./src/assets/images/HomePage.png "home page")
+### About Page
+>![About Page](./src/assets/images/AboutPage.png "about page")
+### Portfolio Page
+>![Portfolio Page](./src/assets/images/PortfolioPage.png "portfolio page")
+### Resume Page
+>![Resume Page](./src/assets/images/ResumePage.png "resume page")
+### Contact Page
+>![Contact Page](./src/assets/images/ContactPage.png "contact page")
