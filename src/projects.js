@@ -1,6 +1,12 @@
 // project lists to map and render
 const projects = [
   {
+    name: 'Step-It-Up',
+    description: 'A fitness tracking app where you can create, schedule and track routines. You can monitor your weight and calorie over time. You can read and post on the blog to share your experience!',
+    link: 'https://step-it-up.herokuapp.com/',
+    image: 'stepitup.png',
+  },
+  {
     name: 'Share-A-Byte',
     description: 'A recipe blog where you can create an account to add, view and favorite recipes. Connected to Open AI API to create random recipes.',
     link: 'https://share-a-byte.herokuapp.com/',
