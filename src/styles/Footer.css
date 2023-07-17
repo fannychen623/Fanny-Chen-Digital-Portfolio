@@ -1,19 +1,10 @@
 /* styling for the Footer */
 .footer {
-    background-color: var(--shade4);
+    background-color: var(--shade1);
+    color: var(--shade4);
     bottom: 0;
-    padding: 2vh;
+    padding: 1vh 2vh 0vh 2vh;
     height: fit-content;
     text-align: center;
-    margin: auto;
-}
-
-svg {
-    width: 2.75vw;
-    margin: 3vh;
-}
-
-a svg {
-    width: 4vw;
-    margin: 3vh;
+    white-space: pre-line;
 }

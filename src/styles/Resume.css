@@ -1,11 +1,43 @@
 /* styling for the Resume page */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideInFromBottom {
+    0% { transform: translateY(100%); }
+    100% { transform: translateY(0); }
+}
+
 .resume {
-    height: fit-content;
-    text-align: center;
+    animation: 0.75s ease-in 0s 1 fadeIn, 0.75s ease-in 0s 1 slideInFromBottom;
     padding: 5vh;
 }
 
-iframe {
-    width: 50vw;
-    height: 100vh;
+.resume button {
+    position: relative;
+    left: 70vw;
+    padding: 1.5vw;
+    margin-bottom: 3vh;
+    background: none;
+    font-family: 'Quicksand', sans-serif;
+    color: var(--shade4);
+    font-size: 1.5vw;
+    font-weight: 600;
+}
+
+.resume button:hover {
+    background: var(--shade2);
+    color: var(--shade1);
+}
+
+.resume iframe {
+    width: 75vw;
+    height: 150vh;
+    margin: auto;
+}
+
+.resume img {
+    width: 80%;
+    margin: auto;
 }

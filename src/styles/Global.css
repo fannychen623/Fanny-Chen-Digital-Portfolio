@@ -1,0 +1,20 @@
+/* styling for all pages */
+
+/* define color palette */
+:root {
+    --shade1: #e5ebf8;
+    --shade2: #596ca2;
+    --shade3: #498ccd;
+    --shade4: #003775;
+    --shade5: #000f33;
+    --trans:  #98755400;
+}
+
+/* import font used throughout pages */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+.global {
+	background: linear-gradient(0deg, var(--shade4), var(--shade2),  var(--shade1));
+	background-size: 100%;
+	height: fit-content;
+}

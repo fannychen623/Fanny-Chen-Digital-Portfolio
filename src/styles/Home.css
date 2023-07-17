@@ -1,18 +1,48 @@
 /* styling for the Home page */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 0.8; }
+}
+
+@keyframes flicker {
+    0% { opacity: 0; }
+    50% { opacity: 0.5; }
+    100% { opacity: 0; }
+}
+
 .home {
+    animation: 1.25s ease-in 0s 1 fadeIn;
     color: var(--shade4);
     text-align: center;
     height: 100vh;
-    padding-top: 15%;
+    text-align: center;
+    padding-top: 36vh;
 }
 
 .name {
-    display : flex;
-    align-items : center;
-    padding-left: 20vw;
     font-family: 'Quicksand', sans-serif;
     font-size: 10vw;
     height: 25vh;
-    background: var(--shade2);
-    text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+    padding-top: 1.5vh;
+    background: var(--shade1);
+    opacity: 0.8;
+    text-shadow: -1px -1px 1px rgba(255, 255, 255, .1), 1px 1px 1px rgba(0, 0, 0, .5);
+}
+
+.name:hover {
+    transition: all 250ms ease-in;
+    transform: scale(1.05);
+    opacity: 1;
+    cursor: pointer;
+}
+
+.home h2 {
+    animation: 5s ease-in 2s infinite flicker;
+    color: var(--shade4);
+    opacity: 0;
+    font-size: 1.5vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-right: 1.5vw;
 }

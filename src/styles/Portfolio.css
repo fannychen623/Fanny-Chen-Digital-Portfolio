@@ -1,61 +1,39 @@
 /* styling for the Portfolio page */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideInFromBottom {
+    0% { transform: translateY(100%); }
+    100% { transform: translateY(0); }
+}
+
 .portfolio {
+    animation: 2s ease-in 0s 1 fadeIn;
     color: var(--shade5);
     font-family: 'Quicksand', sans-serif;
     padding: 5vh;
-    text-align: center;
+    white-space: pre-line;
 }
 
-.portfolio h1 {
-    font-size: 3vw;
-    font-weight: bolder;
-    text-align: center;
-    padding: 1vh;
-    color: var(--shade2);
-    background-color: var(--shade4);
-}
-
-.portfolio img {
-    width: 35vh;
+.image-gallery {
+    width: 70%;
     height: auto;
-    margin-bottom: 1vh;
+    margin: auto;
 }
 
-.gallery {
-    column-count: 4;
-    column-gap: 5vw;
-    column-rule: 3px solid var(--shade1);
-    font-size: 1.15vw;
-}
-
-.project {
-    page-break-inside: avoid;
-    column-span: 1;
-    margin-bottom: 5vh;
-}
-
-.projectTitle {
-    font-size: 1.5vw;
-    color: var(--shade4);
-    -webkit-text-stroke: 0.25px var(--shade5);
-    background-color: var(--shade1);
-}
-
-.mainProject {
-    border: 5vh solid var(--shade1);
-    padding: 3vh;
-    margin: 5vh auto;
-    font-size: 1.75vw;
-}
-
-.mainProject img {
-    width: 35vw;
+.image-gallery-slide img {
+    width: 100%;
     height: auto;
-    margin-bottom: 5vh;
+    max-height: 80vh;
+    object-fit: cover;
+    overflow: hidden;
+    object-position: center center;
 }
 
-.mainProject .projectTitle {
-    font-size: 3vw;
+.fullscreen .image-gallery-slide img {
+    max-height: 100vh;
 }
 
 /* styling for the mobile screen sizes */

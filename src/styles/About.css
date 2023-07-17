@@ -1,51 +1,48 @@
 /* styling for the About page */
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideInFromBottom {
+    0% { transform: translateY(100%); }
+    100% { transform: translateY(0); }
+}
+@keyframes slideInFromLeft {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+}
+@keyframes slideInFromRight {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(0); }
+}
+
 .about {
+    animation: 0.75s ease-in 0s 1 fadeIn;
     color: var(--shade5);
     font-family: 'Quicksand', sans-serif;
     padding: 5vh;
 }
 
-.aboutHead {
-    display: flex;
-    font-size: 1.25vw;
-    margin-bottom: 5vh;
+.about .css-fkqrqw{
+    border: none;
 }
 
-.aboutHead img {
-    width: 50vh;
-    height: auto;
+.about .css-1eam21a {
+    color: var(--shade4);
 }
 
-.aboutMain {
-    padding-left: 3vw;
-    padding-right: 2vw;
+#avatar {
+    animation: 1s ease-in 0s 1 slideInFromLeft;
 }
 
-.aboutDetails {
-    column-count: 3;
-    column-gap: 5vw;
-    column-rule: 5px solid var(--shade4);
-    font-size: 1.15vw;
+#background, #present {
+    animation: 1s ease-in 0s 1 slideInFromBottom;
 }
 
-.background, .present, .funFacts {
-    page-break-inside: avoid;
-    column-span: 1;
-}
-
-.about h1 {
-    font-size: 2vw;
-    font-weight: bolder;
-    text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-bottom: 15px;
-    color: var(--shade2);
-    background-color: var(--shade4);
-}
-
-.background {
-    margin-top: -20px;
+#funFacts {
+    animation: 1s ease-in 0s 1 slideInFromRight;
 }
 
 /* styling for the mobile screen sizes */
