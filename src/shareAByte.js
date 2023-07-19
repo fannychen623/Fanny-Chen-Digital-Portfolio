@@ -1,6 +1,6 @@
 // project lists to map and render
 
-const urlPrefix = 'https://github.com/fannychen623/Fanny-Chen-Digital-Portfolio/blob/main/src/assets/images/';
+const urlPrefix = 'https://github.com/fannychen623/Fanny-Chen-Digital-Portfolio/blob/main/src/assets/shareAByte/';
 const urlSuffix = '?raw=true';
 
 const shareAByte = [
@@ -17,8 +17,8 @@ const shareAByte = [
       'View/update/remove your own recipes',
       'View/remove from a list of your favorite recipes',
     ],
-    original: `${urlPrefix}stepitup.png${urlSuffix}`,
-    thumbnail: `${urlPrefix}stepitup.png${urlSuffix}`,
+    original: `${urlPrefix}homePage.png${urlSuffix}`,
+    thumbnail: `${urlPrefix}homePage.png${urlSuffix}`,
     // originalHeight: '20px',
     // originalWidth: '220px', 
     // thumbnailHeight: '20px', 

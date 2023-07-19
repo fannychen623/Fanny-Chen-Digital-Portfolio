@@ -1,0 +1,19 @@
+.swiper {
+  width: 100%;
+}
+
+.swiper-slide {
+  background-position: center;
+  width: 75%;
+  height: auto;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  color: var(--shade1);
+  font-weight: bold;
+}

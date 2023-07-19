@@ -1,6 +1,6 @@
 // project lists to map and render
 
-const urlPrefix = 'https://github.com/fannychen623/Fanny-Chen-Digital-Portfolio/blob/main/src/assets/images/';
+const urlPrefix = 'https://github.com/fannychen623/Fanny-Chen-Digital-Portfolio/blob/main/src/assets/gifMeMarvel/';
 const urlSuffix = '?raw=true';
 
 const stepItUp = [
@@ -13,8 +13,8 @@ const stepItUp = [
       'Favorite and Unfavorite GIFs.',
       'Re-access favorite GIFs that are stored in local storage.',
     ],
-    original: `${urlPrefix}stepitup.png${urlSuffix}`,
-    thumbnail: `${urlPrefix}stepitup.png${urlSuffix}`,
+    original: `${urlPrefix}homePage.png${urlSuffix}`,
+    thumbnail: `${urlPrefix}homePage.png${urlSuffix}`,
     // originalHeight: '20px',
     // originalWidth: '220px', 
     // thumbnailHeight: '20px', 

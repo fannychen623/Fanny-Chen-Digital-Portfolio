@@ -5,7 +5,7 @@ import {
   Text, Box,
 } from '@chakra-ui/react'
 
-import '../styles/Footer.css';
+import '../styles/footer.css';
 
 export default function Footer() {
   return (

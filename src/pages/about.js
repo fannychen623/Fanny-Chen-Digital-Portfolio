@@ -4,19 +4,19 @@ import React from 'react';
 import {
   Card, CardHeader, CardBody,
   List, ListItem, ListIcon,
-  Grid, GridItem,
+  Grid, GridItem, Box,
   Heading, Text, Stack, Image,
 } from '@chakra-ui/react'
 
 import { AiTwotoneCloud } from 'react-icons/ai';
 
-import '../../styles/About.css';
+import '../styles/about.css';
 // import avatar image from assets
-import Avatar from '../../assets/images/Avatar.JPG';
+import Avatar from '../assets/images/Avatar.JPG';
 
 export default function About() {
   return (
-    <div className="about">
+    <Box className="about">
       {/* section of avatar with general summary */}
       <Card id='avatar' direction={{ base: 'column', sm: 'row' }} overflow='hidden' variant='outline' >
         <Image objectFit='cover' minH='20vw' height='30vw' width='auto' src={`${Avatar}`} alt='Avatar' />
@@ -142,6 +142,6 @@ export default function About() {
           </Card>
         </GridItem>
       </Grid>
-    </div>
+    </Box>
   );
 }

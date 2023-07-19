@@ -4,16 +4,8 @@ import { Link } from 'react-router-dom';
 
 // import package components
 import {
-  Flex, Box, Tooltip,
-  IconButton, Divider, 
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuItemOption,
-  MenuGroup,
-  MenuOptionGroup,
-  MenuDivider,
+  Flex, Box, Tooltip, IconButton, Divider, 
+  Menu, MenuButton, MenuList, MenuItem, MenuGroup,
 } from '@chakra-ui/react';
 
 // import icons
@@ -24,7 +16,7 @@ import {
 } from 'react-icons/ai';
 
 // import local style sheet
-import '../styles/NavBar.css';
+import '../styles/navBar.css';
 
 // page navigation bar
 function NavTabs() {
