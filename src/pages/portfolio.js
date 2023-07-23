@@ -3,19 +3,17 @@ import React from 'react';
 import ImageGallery from 'react-image-gallery';
 
 // import projects that will populate the portfolio page
-import projects from '../projects';
-import stepItUp from '../stepItUp';
-import shareAByte from '../shareAByte';
-import gifMeMarvel from '../gifMeMarvel';
+import projects from '../miniProjects';
+import mainProjects from '../mainProjects';
 
 import Carousel from '../components/carousel';
 
 import {
   List, ListItem, ListIcon, Box,
-  Grid, GridItem,
+  Grid, GridItem, AspectRatio,
   Heading, Text, Stack, Image, Button,
   Accordion, AccordionItem, AccordionButton,
-  AccordionPanel, AccordionIcon, useDisclosure,
+  AccordionPanel, AccordionIcon, useDisclosure, Link,
 } from '@chakra-ui/react'
 
 import {
@@ -40,46 +38,57 @@ export default function Portfolio() {
 
   return (
     <Box className="portfolio">
+      {/* <AspectRatio maxW='560px' ratio={1}>
+        <iframe
+          title='naruto'
+          src='../assets/shareAByte/shareAByte.webm'
+          allowFullScreen
+        />
+      </AspectRatio> */}
+      <Text fontSize='3vw' fontWeight='bold' color='white' textAlign='center' textShadow='var(--shade4) 1px 0 10px' mt='-2vh' mb='2vh'>PROJECTS</Text>
       <Carousel />
-      <Text fontSize='3vw' fontWeight='bold' color='white' textAlign='center' my='3vh'>MINI PROJECTS</Text>
+      <Text fontSize='2.5vw' fontWeight='bold' color='white' textAlign='center' mt='10vh' mb='5vh'>MINI PROJECTS</Text>
       <Accordion allowMultiple>
         {projects.slice(3).map((project) => (
           <AccordionItem>
-            <h2>
-              <AccordionButton color='white' _expanded={{ bg: 'var(--shade1)', color: 'var(--shade4)' }}>
-                <Box as="span" flex='1' textAlign='left' fontSize='1.5vw'>
-                  {`${project.name}`}
-                </Box>
-                <AccordionIcon fontSize='1.5vw' color='white' />
-              </AccordionButton>
-            </h2>
-            <AccordionPanel pb={4}>
-              <Grid templateColumns='repeat(10, 1fr)' gap={4} >
-                <GridItem colSpan={2}>
+            <AccordionButton color='white' p='2vh'
+              _expanded={{ bg: 'var(--shade1)', color: 'var(--shade4)', fontWeight: 'bold', }}
+              _hover={{ bg: 'var(--shade1)', color: 'var(--shade4)', fontWeight: 'bold', }}
+            >
+              <Box as="span" flex='1' textAlign='left' fontSize='1.5vw'>
+                {`${project.name}`}
+              </Box>
+              <AccordionIcon fontSize='1.5vw' color='white' />
+            </AccordionButton>
+            <AccordionPanel>
+              <Grid templateColumns='repeat(10, 1fr)' gap='4' py='2vh'>
+                <GridItem colSpan='2'>
                   <Image
                     src={images[`${project.image}`]}
                     alt={`${project.name}`}
                     borderRadius='lg'
                   />
                 </GridItem>
-                <GridItem colSpan={6} my='auto'>
+                <GridItem colSpan='6' my='auto'>
                   <Text fontSize='1.25vw' color='white'>{`${project.description}`}</Text>
                 </GridItem>
-                <GridItem colSpan={2} my='auto' textAlign='right'>
-                  <Button
-                    fontSize='2xl'
-                    p='1.5vw'
-                    variant='solid'
-                    backgroundColor='var(--shade1)'
-                    color='var(--shade4)'
-                    leftIcon={<BiLinkExternal />}
-                    _hover={{
-                      background: 'var(--shade4)',
-                      color: 'white',
-                    }}
-                  >
-                    View Repository
-                  </Button>
+                <GridItem colSpan='2' my='auto' textAlign='right'>
+                  <Link as='a' target="_blank" href={`${project.link}`}>
+                    <Button
+                      fontSize='2xl'
+                      p='1.5vw'
+                      variant='solid'
+                      backgroundColor='var(--shade1)'
+                      color='var(--shade4)'
+                      leftIcon={<BiLinkExternal />}
+                      _hover={{
+                        background: 'var(--shade4)',
+                        color: 'white',
+                      }}
+                    >
+                      View Repository
+                    </Button>
+                  </Link>
                 </GridItem>
               </Grid>
             </AccordionPanel>

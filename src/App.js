@@ -8,7 +8,6 @@ import Footer from "./components/footer";
 import Home from "./pages/home";
 import About from "./pages/about";
 import Portfolio from "./pages/portfolio";
-import ProjectModal from "./components/projectModal";
 import Resume from "./pages/resume";
 
 // import local global style sheet
@@ -24,7 +23,6 @@ function App() {
           <Route path="/Fanny-Chen-Digital-Portfolio" element={<Home />} />
           <Route path="/about" element={<><NavTabs /><About /><Footer /></>} />
           <Route path="/portfolio" element={<><NavTabs /><Portfolio /><Footer /></>}/>
-          <Route path="/portfolio/project" element={<><ProjectModal /></>} />
           <Route path="/resume" element={<><NavTabs /><Resume /><Footer /></>} />
         </Routes>
       </div>

@@ -1,5 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'
+
+import {
+  BiDumbbell, BiLinkExternal,
+  BiMoviePlay, BiRestaurant,
+  BiRocket,
+} from "react-icons/bi";
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -8,29 +15,62 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import 'swiper/css/free-mode';
+import 'swiper/css/thumbs';
 
 import '../styles/carousel.css';
 
 // import required modules
-import { 
-  EffectCoverflow, Keyboard, 
-  Pagination, Navigation
+import {
+  EffectCoverflow, Keyboard,
+  Pagination, Navigation,
+  FreeMode, Thumbs,
 } from 'swiper/modules';
 
-import stepItUp from '../stepItUp';
-import shareAByte from '../shareAByte';
-import gifMeMarvel from '../gifMeMarvel';
+import {
+  List, ListItem, ListIcon, Box,
+  Grid, GridItem,
+  Heading, Text, Stack, Image, Button,
+  Modal, ModalOverlay, ModalContent,
+  ModalFooter, ModalBody,
+  ModalCloseButton, useDisclosure,
+} from '@chakra-ui/react'
+
+import mainProjects from '../mainProjects';
+// import projectModal from './projectModal';
+
+// function to import images
+function importAll(img) {
+  let images = {};
+  img.keys().forEach((item, index) => { images[item.replace('./', '')] = img(item); });
+  return images
+}
+
+// defines images to call importAll function to import images
+const images = importAll(require.context('../assets/'), false, /\.(png|jpe?g|svg)$/);
+
+const icons = { BiDumbbell, BiRestaurant, BiRocket, };
 
 export default function Carousel() {
 
-  const navigate = useNavigate();
-  const openProject = ({project}) => navigate("/portfolio/project", project);
+  const { isOpen, onOpen, onClose } = useDisclosure()
+
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [modalData, setModalData] = useState(0);
+
+  const [thumbsSwiper, setThumbsSwiper] = useState(null);
+
+  const [showFullscreenImage, setShowFullscreenImage] = useState(false);
+  const [fullscreenImage, setFullscreenImage] = useState('');
+
+  const [showVideo, setShowVideo] = useState(false);
+  const [video, setVideo] = useState('');
 
   return (
     <>
       <Swiper
         effect={'coverflow'}
-        grabCursor={true}
+        grabCursor={false}
         centeredSlides={true}
         slidesPerView={'auto'}
         coverflowEffect={{
@@ -46,18 +86,133 @@ export default function Carousel() {
         pagination={true}
         navigation={true}
         modules={[EffectCoverflow, Keyboard, Pagination, Navigation]}
-        className="mySwiper"
+        className="mainCarousel"
+        style={{ zIndex: '0' }}
       >
-        <SwiperSlide>
-          <img src={`${stepItUp[0].original}`} alt={`${stepItUp[0].originalTitle}`} onClick={openProject(stepItUp)} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={`${shareAByte[0].original}`} alt={`${shareAByte[0].originalTitle}`} onClick={openProject(shareAByte)} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={`${gifMeMarvel[0].original}`} alt={`${gifMeMarvel[0].originalTitle}`} onClick={openProject(gifMeMarvel)} />
-        </SwiperSlide>
+        {mainProjects.map((project, index) => (
+          <SwiperSlide>
+            <img src={images[`${project.thumbnail}`]} alt={`${project.title}`}
+              onClick={() => {
+                setModalData(index);
+                setModalIsOpen(true);
+              }} />
+          </SwiperSlide>
+        ))}
       </Swiper>
+      <p id='carouselCaption'>Click on image to view details</p>
+
+      <Modal isOpen={modalIsOpen} onClose={() => setModalIsOpen(false)} >
+        <ModalOverlay />
+        <ModalContent maxW="80vw" borderRadius='2vw'>
+          <ModalCloseButton fontSize='xlg' m='2vh' />
+          <ModalBody>
+            <Image
+              id='fullscreenImage'
+              style={{ display: showFullscreenImage ? 'block' : 'none' }}
+              src={images[`${fullscreenImage}`]}
+              alt={fullscreenImage}
+              onClick={() => setShowFullscreenImage(false)}
+            />
+            {/* <video
+              id='videoPlayer'
+              autoplay muted
+              width="320" height="240"
+              // style={{ display: showVideo ? 'block' : 'none' }}
+              // src={`../assets/${mainProjects[modalData].video}`}
+              // onClick={() => setShowVideo(false)}
+              >
+                <source src='../assets/shareAByte/shareAByte.mp4' type="video/mp4" />
+            </video> */}
+            <Grid templateColumns='repeat(10, 1fr)' gap={4} >
+              <GridItem rowSpan={2} colSpan={6} my='auto' mr='1vw' pt='2vh'>
+                <Swiper
+                  loop={true}
+                  spaceBetween={10}
+                  pagination={{
+                    type: 'fraction',
+                  }}
+                  navigation={true}
+                  thumbs={{ swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null }}
+                  modules={[FreeMode, Pagination, Navigation, Thumbs]}
+                  className="carouselTop"
+                >
+                  {mainProjects[modalData].images.map((image) => (
+                    <SwiperSlide>
+                      <img src={images[`${image}`]} alt={`${image}`} 
+                      onClick={() => { setShowFullscreenImage(true); setFullscreenImage(`${image}`) }}/>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+                <Swiper
+                  onSwiper={setThumbsSwiper}
+                  loop={true}
+                  spaceBetween={10}
+                  slidesPerView={4}
+                  freeMode={true}
+                  watchSlidesProgress={true}
+                  modules={[FreeMode, Navigation, Thumbs]}
+                  className="carouselBottom"
+                >
+                  {mainProjects[modalData].images.map((image) => (
+                    <SwiperSlide>
+                      <img src={images[`${image}`]} alt={`${image}`} />
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+
+              </GridItem>
+              <GridItem rowSpan={1} colSpan={4}>
+                <Stack>
+                  <Heading size='xlg'>{`${mainProjects[modalData].title}`}{'\n'}</Heading>
+                  <Text fontSize='3xl' mb='3vh'>{`${mainProjects[modalData].summary}`}</Text>
+                  <Text as='b' fontSize='3xl'>Application Features:{'\n'}</Text>
+                  <List mt='2vh'>
+                    {mainProjects[modalData].features.map((feature) => (
+                      <ListItem display='flex'>
+                        <ListIcon as={icons[`${mainProjects[modalData].icon}`]} color='var(--shade4)' fontSize='1.5vw' mr='0.5vw' mb='-0.5vh' />
+                        <Text fontSize='2xl'>{`${feature}`}</Text>
+                      </ListItem>
+                    ))}
+                  </List>
+                </Stack>
+              </GridItem>
+              <GridItem rowSpan={1} colSpan={4} my='2vh' display='flex' justifyContent='space-between'>
+                <Button
+                  fontSize='2xl'
+                  p='1.5vw'
+                  mr='1vw'
+                  variant='solid'
+                  backgroundColor='var(--shade4)'
+                  color='white'
+                  leftIcon={<BiMoviePlay />}
+                  _hover={{
+                    background: 'var(--shade1)',
+                    color: 'var(--shade4)',
+                  }}
+                >
+                  Watch Video
+                </Button>
+                <Button
+                  fontSize='2xl'
+                  p='1.5vw'
+                  mr='1vw'
+                  variant='solid'
+                  backgroundColor='var(--shade4)'
+                  color='white'
+                  leftIcon={<BiLinkExternal />}
+                  _hover={{
+                    background: 'var(--shade1)',
+                    color: 'var(--shade4)',
+                  }}
+                >
+                  View Repository
+                </Button>
+              </GridItem>
+            </Grid>
+          </ModalBody>
+        </ModalContent>
+      </Modal>
+
     </>
   );
 }
