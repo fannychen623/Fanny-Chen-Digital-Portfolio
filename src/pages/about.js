@@ -18,17 +18,17 @@ export default function About() {
   return (
     <Box className="about">
       {/* section of avatar with general summary */}
-      <Card id='avatar' direction={{ base: 'column', sm: 'row' }} overflow='hidden' variant='outline' >
-        <Image objectFit='cover' minH='20vw' height='30vw' width='auto' src={`${Avatar}`} alt='Avatar' />
+      <Card id='avatar' direction={{ base: 'column', sm: 'row' }} overflow='hidden' variant='outline'>
+        <Image objectFit='cover' m='auto' height='57vh' width='auto' src={`${Avatar}`} alt='Avatar' />
         <Stack ml='1vw'>
           <CardBody>
             <Heading size='xlg'>About Me</Heading>
             <Text>
-              Fits all the new-york stereotypes:
+              Matches all the New York stereotypes:
               <List spacing={3} my='1vw'>
                 <ListItem>
                   <ListIcon as={AiTwotoneCloud} color='var(--shade3)' fontSize='1.5vw' m='0' mr='1vw' />
-                  Walks fast.
+                  Walks and does everything fast.
                 </ListItem>
                 <ListItem>
                   <ListIcon as={AiTwotoneCloud} color='var(--shade3)' fontSize='1.5vw' m='0' mr='1vw' />
@@ -36,20 +36,32 @@ export default function About() {
                 </ListItem>
                 <ListItem>
                   <ListIcon as={AiTwotoneCloud} color='var(--shade3)' fontSize='1.5vw' m='0' mr='1vw' />
-                  MTA's repeat customer.
+                  Unfazed by chaotic events.
                 </ListItem>
                 <ListItem>
                   <ListIcon as={AiTwotoneCloud} color='var(--shade3)' fontSize='1.5vw' m='0' mr='1vw' />
-                  Only accepts NY slice pizza.
+                  Loyal customer of the MTA.
+                </ListItem>
+                <ListItem>
+                  <ListIcon as={AiTwotoneCloud} color='var(--shade3)' fontSize='1.5vw' m='0' mr='1vw' />
+                  High expectations for food.
+                </ListItem>
+                <ListItem>
+                  <ListIcon as={AiTwotoneCloud} color='var(--shade3)' fontSize='1.5vw' m='0' mr='1vw' />
+                  Low expectations for standard of living.
+                </ListItem>
+                <ListItem>
+                  <ListIcon as={AiTwotoneCloud} color='var(--shade3)' fontSize='1.5vw' m='0' mr='1vw' />
+                  Can only have bagels and pizza the NY way.
                 </ListItem>
               </List>
               <p>
                 Born and raised in Brooklyn, NY. Though I can't tell, I was told I have a Brooklyn accent.
                 As a child of immigrant parents, I was raised with Asian influence while growing up in American culture.
-                I like my noodle soups but would also crave a good bowl of mac and cheese.
+                I like my hot noodle soups but would also crave a good bowl of mac and cheese.
                 Education was prioritized in the house but not at the sacrifice of creative freedom.
                 Being bilingual was by default, which makes me fluent in both English and Chinese.
-                I am 100% a city person and never bored of the Big Apple, the city of dreams.
+                Forever a city person and never bored of the Big Apple.
               </p>
             </Text>
           </CardBody>
@@ -76,7 +88,7 @@ export default function About() {
           </Card>
         </GridItem>
         <GridItem id='funFacts' rowSpan={2} colSpan={4}>
-          <Card px='1vw'>
+          <Card px='1vw' height='100%'>
             <CardHeader mb='-1vw'>
               <Heading size='xlg'>Fun Facts</Heading>
             </CardHeader>
@@ -89,15 +101,15 @@ export default function About() {
                   </ListItem>
                   <ListItem>
                     <ListIcon as={AiTwotoneCloud} color='var(--shade3)' fontSize='1.5vw' m='0' mr='1vw' />
-                    Loves to cook but dislikes having to clean up afterwards.
+                    Loves to cook but dreads having to clean up afterwards.
                   </ListItem>
                   <ListItem>
                     <ListIcon as={AiTwotoneCloud} color='var(--shade3)' fontSize='1.5vw' m='0' mr='1vw' />
-                    Likes to craft but each craft hobby only lasts a few months before moving on to the next one (sketching, painting, knitting, DIY knick knacks).
+                    Does not know how to play any instruments and interested in learning one.
                   </ListItem>
                   <ListItem>
                     <ListIcon as={AiTwotoneCloud} color='var(--shade3)' fontSize='1.5vw' m='0' mr='1vw' />
-                    Has dreams to travel the world but only ventured into the countries Canda, China, Mexico, and Korea thus far.
+                    Has dreams to travel the world but only ventured to Italy, Switzerland, France, England, Canda, China, Mexico, and Korea thus far.
                   </ListItem>
                   <ListItem>
                     <ListIcon as={AiTwotoneCloud} color='var(--shade3)' fontSize='1.5vw' m='0' mr='1vw' />
@@ -117,7 +129,11 @@ export default function About() {
                   </ListItem>
                   <ListItem>
                     <ListIcon as={AiTwotoneCloud} color='var(--shade3)' fontSize='1.5vw' m='0' mr='1vw' />
-                    Coffee does not wake me up but I am rarely tired anyways.
+                    Drinks coffee only for the taste since does not wake me up.
+                  </ListItem>
+                  <ListItem>
+                    <ListIcon as={AiTwotoneCloud} color='var(--shade3)' fontSize='1.5vw' m='0' mr='1vw' />
+                    Doesn't sleep but also doesn't get tired.
                   </ListItem>
                 </List>
               </Text>
@@ -125,7 +141,7 @@ export default function About() {
           </Card>
         </GridItem>
         <GridItem id='present' rowSpan={1} colSpan={6}>
-          <Card px='1vw'>
+          <Card px='1vw' height='100%'>
             <CardHeader mb='-1vw'>
               <Heading size='xlg'>Present</Heading>
             </CardHeader>
@@ -135,8 +151,8 @@ export default function About() {
                 My work focuses on patient care related to raiation therapy treatments.
                 Additionally, I am also in charge of several database and web project for the department.
                 I work closely with the IT team at the hospital to bring new and improved systems to the department.
-                Due to my interest and involvement in the technical projects, I am attending the Columbia University School of Engineering's coding Boot Camp as a part-time student.
-                The boot camp is due to complete in May of 2023 to which I will receive my certification as a full-stack developer.
+                Due to my interest and involvement in the technical projects, I attended the Columbia University School of Engineering's coding Boot Camp as a part-time student.
+                In May of 2023 I received my certification as a full-stack developer.
               </Text>
             </CardBody>
           </Card>

@@ -34,11 +34,11 @@ function NavTabs() {
               <IconButton variant='link' ml='2vw' aria-label='Portfolio' icon={<AiOutlineFolder />} />
             </Tooltip>
           </Link>
-          <Link to='/portfolio'>
+          {/* <Link to='/'>
             <Tooltip hasArrow label='Developer Skills' fontSize='1vw' mt='1vh' bg='var(--shade5)' color='white'>
               <IconButton variant='link' ml='2vw' aria-label='Developer Skills' icon={<AiOutlineCode />} />
             </Tooltip>
-          </Link>
+          </Link> */}
         </Box>
         <Box width='50vw' textAlign='end' pr='5'>
           <Link to='/resume'>

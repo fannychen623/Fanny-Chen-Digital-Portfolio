@@ -87,7 +87,7 @@ export default function Carousel() {
         style={{ zIndex: '0' }}
       >
         {mainProjects.map((project, index) => (
-          <SwiperSlide>
+          <SwiperSlide key={index}>
             <img src={images[`${project.thumbnail}`]} alt={`${project.title}`}
               onClick={() => {
                 setModalData(index);
@@ -124,8 +124,8 @@ export default function Carousel() {
                   className="carouselTop"
                 >
                   {mainProjects[modalData].images.map((image) => (
-                    <SwiperSlide>
-                      <img src={images[`${image}`]} alt={`${image}`}
+                    <SwiperSlide key={image}>
+                      <img src={images[`${image}`]} alt={image}
                         onClick={() => { setShowFullscreenImage(true); setFullscreenImage(`${image}`) }} />
                     </SwiperSlide>
                   ))}
@@ -141,7 +141,7 @@ export default function Carousel() {
                   className="carouselBottom"
                 >
                   {mainProjects[modalData].images.map((image) => (
-                    <SwiperSlide>
+                    <SwiperSlide key={image}>
                       <img src={images[`${image}`]} alt={`${image}`} />
                     </SwiperSlide>
                   ))}
@@ -150,12 +150,12 @@ export default function Carousel() {
               </GridItem>
               <GridItem rowSpan={1} colSpan={4}>
                 <Stack>
-                  <Heading size='xlg'>{`${mainProjects[modalData].title}`}{'\n'}</Heading>
+                  <Heading size='xlg' color='var(--shade4)'>{`${mainProjects[modalData].title}`}{'\n'}</Heading>
                   <Text fontSize='3xl' mb='3vh'>{`${mainProjects[modalData].summary}`}</Text>
-                  <Text as='b' fontSize='3xl'>Application Features:{'\n'}</Text>
+                  <Text as='b' fontSize='3xl' color='var(--shade4)'>Application Features:{'\n'}</Text>
                   <List mt='2vh'>
-                    {mainProjects[modalData].features.map((feature) => (
-                      <ListItem display='flex'>
+                    {mainProjects[modalData].features.map((feature, index) => (
+                      <ListItem display='flex' key={index}>
                         <ListIcon as={icons[`${mainProjects[modalData].icon}`]} color='var(--shade4)' fontSize='1.5vw' mr='0.5vw' mb='-0.5vh' />
                         <Text fontSize='2xl'>{`${feature}`}</Text>
                       </ListItem>

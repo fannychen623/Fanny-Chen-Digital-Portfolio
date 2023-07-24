@@ -4,17 +4,24 @@
     100% { opacity: 1; }
 }
 
-@keyframes slideInFromBottom {
-    0% { transform: translateY(100%); }
-    100% { transform: translateY(0); }
-}
-
 .portfolio {
-    animation: 2s ease-in 0s 1 fadeIn;
+    animation: 1.25s ease-in 0s 1 fadeIn;
     color: var(--shade5);
     font-family: 'Quicksand', sans-serif;
     padding: 5vh;
+    margin-top: -8vh;
     white-space: pre-line;
+}
+
+#projectHeading {
+    position: relative;
+    left: -40vw;
+    top: 40vh;
+    font-size: 3vw;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    transform: rotate(-90deg);
 }
 
 .image-gallery {
@@ -34,17 +41,6 @@
 
 .fullscreen .image-gallery-slide img {
     max-height: 100vh;
-}
-
-#projectHeading {
-    position: absolute;
-    left: 0;
-    top: 25%;
-    font-size: 3vw;
-    font-weight: bold;
-    color: white;
-    text-align: center;
-    transform: rotate(-90deg);
 }
 
 /* styling for the mobile screen sizes */
