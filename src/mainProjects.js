@@ -31,7 +31,7 @@ const mainProjects = [
       'stepItUp/createRoutine2.png',
       'stepItUp/createPost.png',
     ],
-    video: 'stepItUp/stepItUp.mov',
+    video: 'https://drive.google.com/file/d/1yqn8I9oVM2WCcu3dixPyfWu7O5IIUvU9/view?usp=sharing',
     repository: 'https://github.com/analisegiobbi3/Step_IT_Up',
   },
   {
@@ -61,12 +61,12 @@ const mainProjects = [
       'shareAByte/newRecipe.png',
       'shareAByte/randomRecipe.png',
     ],
-    video: 'shareAByte/shareAByte.mov',
+    video: 'https://drive.google.com/file/d/1vQD8mk_XY0VCUSZ8B1Cpv1rNpRRtxcTD/view?usp=sharing',
     repository: 'https://github.com/fannychen623/Project-02-Recipe-Book',
   },
   {
     title: 'GIF Me MARVEL',
-    summary: 'A web application where users can lookup information and browse through GIFs of MARVEL characters.',
+    summary: 'A web application where users can lookup and browse through GIFs of MARVEL characters.',
     features: [
       'Search for specific MARVEL characters.',
       'Navigate to a characters official MARVEL page.',
@@ -84,7 +84,7 @@ const mainProjects = [
       'gifMeMarvel/loadingPage1.png',
       'gifMeMarvel/loadingPage2.png',
     ],
-    video: 'gifMeMarvel/gifMeMarvel.mov',
+    video: 'https://drive.google.com/file/d/1GKSDmhku0hjmfoFpDMUrHUDjFhWyeK-g/view?usp=sharing',
     repository: 'https://github.com/mshaari/gif-me-marvel',
   },
 ];

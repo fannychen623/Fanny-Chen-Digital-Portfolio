@@ -29,7 +29,7 @@ import {
 
 import {
   List, ListItem, ListIcon, Box,
-  Grid, GridItem,
+  Grid, GridItem, Link,
   Heading, Text, Stack, Image, Button,
   Modal, ModalOverlay, ModalContent,
   ModalFooter, ModalBody,
@@ -62,9 +62,6 @@ export default function Carousel() {
 
   const [showFullscreenImage, setShowFullscreenImage] = useState(false);
   const [fullscreenImage, setFullscreenImage] = useState('');
-
-  const [showVideo, setShowVideo] = useState(false);
-  const [video, setVideo] = useState('');
 
   return (
     <>
@@ -99,7 +96,7 @@ export default function Carousel() {
           </SwiperSlide>
         ))}
       </Swiper>
-      <p id='carouselCaption'>Click on image to view details</p>
+      <p id='carouselCaption'>Click on project to view details</p>
 
       <Modal isOpen={modalIsOpen} onClose={() => setModalIsOpen(false)} >
         <ModalOverlay />
@@ -113,16 +110,6 @@ export default function Carousel() {
               alt={fullscreenImage}
               onClick={() => setShowFullscreenImage(false)}
             />
-            {/* <video
-              id='videoPlayer'
-              autoplay muted
-              width="320" height="240"
-              // style={{ display: showVideo ? 'block' : 'none' }}
-              // src={`../assets/${mainProjects[modalData].video}`}
-              // onClick={() => setShowVideo(false)}
-              >
-                <source src='../assets/shareAByte/shareAByte.mp4' type="video/mp4" />
-            </video> */}
             <Grid templateColumns='repeat(10, 1fr)' gap={4} >
               <GridItem rowSpan={2} colSpan={6} my='auto' mr='1vw' pt='2vh'>
                 <Swiper
@@ -138,8 +125,8 @@ export default function Carousel() {
                 >
                   {mainProjects[modalData].images.map((image) => (
                     <SwiperSlide>
-                      <img src={images[`${image}`]} alt={`${image}`} 
-                      onClick={() => { setShowFullscreenImage(true); setFullscreenImage(`${image}`) }}/>
+                      <img src={images[`${image}`]} alt={`${image}`}
+                        onClick={() => { setShowFullscreenImage(true); setFullscreenImage(`${image}`) }} />
                     </SwiperSlide>
                   ))}
                 </Swiper>
@@ -177,41 +164,45 @@ export default function Carousel() {
                 </Stack>
               </GridItem>
               <GridItem rowSpan={1} colSpan={4} my='2vh' display='flex' justifyContent='space-between'>
-                <Button
-                  fontSize='2xl'
-                  p='1.5vw'
-                  mr='1vw'
-                  variant='solid'
-                  backgroundColor='var(--shade4)'
-                  color='white'
-                  leftIcon={<BiMoviePlay />}
-                  _hover={{
-                    background: 'var(--shade1)',
-                    color: 'var(--shade4)',
-                  }}
-                >
-                  Watch Video
-                </Button>
-                <Button
-                  fontSize='2xl'
-                  p='1.5vw'
-                  mr='1vw'
-                  variant='solid'
-                  backgroundColor='var(--shade4)'
-                  color='white'
-                  leftIcon={<BiLinkExternal />}
-                  _hover={{
-                    background: 'var(--shade1)',
-                    color: 'var(--shade4)',
-                  }}
-                >
-                  View Repository
-                </Button>
+                <Link as='a' target="_blank" href={`${mainProjects[modalData].video}`}>
+                  <Button
+                    fontSize='2xl'
+                    p='1.5vw'
+                    mr='1vw'
+                    variant='solid'
+                    backgroundColor='var(--shade4)'
+                    color='white'
+                    leftIcon={<BiMoviePlay />}
+                    _hover={{
+                      background: 'var(--shade1)',
+                      color: 'var(--shade4)',
+                    }}
+                  >
+                    Watch Video
+                  </Button>
+                </Link>
+                <Link as='a' target="_blank" href={`${mainProjects[modalData].repository}`}>
+                  <Button
+                    fontSize='2xl'
+                    p='1.5vw'
+                    mr='1vw'
+                    variant='solid'
+                    backgroundColor='var(--shade4)'
+                    color='white'
+                    leftIcon={<BiLinkExternal />}
+                    _hover={{
+                      background: 'var(--shade1)',
+                      color: 'var(--shade4)',
+                    }}
+                  >
+                    View Repository
+                  </Button>
+                </Link>
               </GridItem>
             </Grid>
           </ModalBody>
         </ModalContent>
-      </Modal>
+      </Modal >
 
     </>
   );

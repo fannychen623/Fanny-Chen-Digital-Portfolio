@@ -36,6 +36,17 @@
     max-height: 100vh;
 }
 
+#projectHeading {
+    position: absolute;
+    left: 0;
+    top: 25%;
+    font-size: 3vw;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    transform: rotate(-90deg);
+}
+
 /* styling for the mobile screen sizes */
 @media screen and (max-width: 820px) { 
     .portfolio {

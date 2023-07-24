@@ -10,9 +10,9 @@ import {
 
 // import icons
 import {
-  AiOutlineHome, AiOutlineFolderOpen, AiOutlineSolution,
-  AiOutlineUser, AiOutlineMail, AiOutlineClose,
-  AiOutlineLinkedin, AiOutlineGithub, 
+  AiOutlineHome, AiOutlineFolder, AiOutlineCode, 
+  AiOutlineSolution, AiOutlineUser, AiOutlineMail, 
+  AiOutlineLinkedin, AiOutlineGithub, AiOutlineClose,
 } from 'react-icons/ai';
 
 // import local style sheet
@@ -31,7 +31,12 @@ function NavTabs() {
           </Link>
           <Link to='/portfolio'>
             <Tooltip hasArrow label='Portfolio' fontSize='1vw' mt='1vh' bg='var(--shade5)' color='white'>
-              <IconButton variant='link' ml='2vw' aria-label='Portfolio' icon={<AiOutlineFolderOpen />} />
+              <IconButton variant='link' ml='2vw' aria-label='Portfolio' icon={<AiOutlineFolder />} />
+            </Tooltip>
+          </Link>
+          <Link to='/portfolio'>
+            <Tooltip hasArrow label='Developer Skills' fontSize='1vw' mt='1vh' bg='var(--shade5)' color='white'>
+              <IconButton variant='link' ml='2vw' aria-label='Developer Skills' icon={<AiOutlineCode />} />
             </Tooltip>
           </Link>
         </Box>

@@ -38,18 +38,13 @@ export default function Portfolio() {
 
   return (
     <Box className="portfolio">
-      {/* <AspectRatio maxW='560px' ratio={1}>
-        <iframe
-          title='naruto'
-          src='../assets/shareAByte/shareAByte.webm'
-          allowFullScreen
-        />
-      </AspectRatio> */}
-      <Text fontSize='3vw' fontWeight='bold' color='white' textAlign='center' textShadow='var(--shade4) 1px 0 10px' mt='-2vh' mb='2vh'>PROJECTS</Text>
+      <Box>
+      <Text id='projectHeading'>MAIN PROJECTS</Text>
       <Carousel />
+      </Box>
       <Text fontSize='2.5vw' fontWeight='bold' color='white' textAlign='center' mt='10vh' mb='5vh'>MINI PROJECTS</Text>
       <Accordion allowMultiple>
-        {projects.slice(3).map((project) => (
+        {projects.map((project) => (
           <AccordionItem>
             <AccordionButton color='white' p='2vh'
               _expanded={{ bg: 'var(--shade1)', color: 'var(--shade4)', fontWeight: 'bold', }}
@@ -71,6 +66,7 @@ export default function Portfolio() {
                 </GridItem>
                 <GridItem colSpan='6' my='auto'>
                   <Text fontSize='1.25vw' color='white'>{`${project.description}`}</Text>
+                  <Text fontSize='1.25vw' color='white'>Tools Used: {`${project.tools}`}</Text>
                 </GridItem>
                 <GridItem colSpan='2' my='auto' textAlign='right'>
                   <Link as='a' target="_blank" href={`${project.link}`}>
