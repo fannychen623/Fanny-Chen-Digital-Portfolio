@@ -1,10 +1,11 @@
 {
   "files": {
     "main.css": "/Fanny-Chen-Digital-Portfolio/static/css/main.22d5efb7.css",
-    "main.js": "/Fanny-Chen-Digital-Portfolio/static/js/main.8e541f11.js",
+    "main.js": "/Fanny-Chen-Digital-Portfolio/static/js/main.c904fd72.js",
     "static/media/gifMeMarvel.mov": "/Fanny-Chen-Digital-Portfolio/static/media/gifMeMarvel.6d478a13f3cc21e5de41.mov",
     "static/media/stepItUp.mov": "/Fanny-Chen-Digital-Portfolio/static/media/stepItUp.dee93a6eae0e332f3ddf.mov",
     "static/media/shareAByte.mov": "/Fanny-Chen-Digital-Portfolio/static/media/shareAByte.2ad72d8653ebe1482474.mov",
+    "static/media/Resume.png": "/Fanny-Chen-Digital-Portfolio/static/media/Resume.da59f642ee921b8f5a2e.png",
     "static/media/shareabyte.png": "/Fanny-Chen-Digital-Portfolio/static/media/shareabyte.cad778021ed1a237f1f3.png",
     "static/media/myFavoritesPage.png": "/Fanny-Chen-Digital-Portfolio/static/media/myFavoritesPage.2120ec9ddc3d9bf64ce4.png",
     "static/media/AboutPage.png": "/Fanny-Chen-Digital-Portfolio/static/media/AboutPage.1fa38982cd2551d6affe.png",
@@ -41,7 +42,6 @@
     "static/media/homePage.png": "/Fanny-Chen-Digital-Portfolio/static/media/homePage.b9b17035cefa1257756c.png",
     "static/media/login.png": "/Fanny-Chen-Digital-Portfolio/static/media/login.82e4db22255addbf3e8b.png",
     "static/media/loadingPage2.png": "/Fanny-Chen-Digital-Portfolio/static/media/loadingPage2.dee0121272d21c9fcd50.png",
-    "static/media/Resume.png": "/Fanny-Chen-Digital-Portfolio/static/media/Resume.6965426345c62ae29397.png",
     "static/media/createRoutine1.png": "/Fanny-Chen-Digital-Portfolio/static/media/createRoutine1.d41b1a91149db40bfdec.png",
     "static/media/addProfile.png": "/Fanny-Chen-Digital-Portfolio/static/media/addProfile.cef52c5d04f3c2438489.png",
     "static/media/Avatar.JPG": "/Fanny-Chen-Digital-Portfolio/static/media/Avatar.49227c63340c2374a449.JPG",
@@ -55,16 +55,16 @@
     "static/media/pwatexteditor.png": "/Fanny-Chen-Digital-Portfolio/static/media/pwatexteditor.b62eac961b110f7215d7.png",
     "static/media/prework.png": "/Fanny-Chen-Digital-Portfolio/static/media/prework.1938739da6db79ce2005.png",
     "static/media/glyphicons-halflings-regular.ttf": "/Fanny-Chen-Digital-Portfolio/static/media/glyphicons-halflings-regular.4692b9ec53fd5972caa2.ttf",
-    "static/media/Resume.pdf": "/Fanny-Chen-Digital-Portfolio/static/media/Resume.ca5253c137013dfc64e1.pdf",
+    "static/media/Resume.pdf": "/Fanny-Chen-Digital-Portfolio/static/media/Resume.b388b58512a1950954fb.pdf",
     "static/media/glyphicons-halflings-regular.woff": "/Fanny-Chen-Digital-Portfolio/static/media/glyphicons-halflings-regular.82b1212e45a2bc35dd73.woff",
     "static/media/glyphicons-halflings-regular.eot": "/Fanny-Chen-Digital-Portfolio/static/media/glyphicons-halflings-regular.5be1347c682810f199c7.eot",
     "static/media/glyphicons-halflings-regular.woff2": "/Fanny-Chen-Digital-Portfolio/static/media/glyphicons-halflings-regular.be810be3a3e14c682a25.woff2",
     "index.html": "/Fanny-Chen-Digital-Portfolio/index.html",
     "main.22d5efb7.css.map": "/Fanny-Chen-Digital-Portfolio/static/css/main.22d5efb7.css.map",
-    "main.8e541f11.js.map": "/Fanny-Chen-Digital-Portfolio/static/js/main.8e541f11.js.map"
+    "main.c904fd72.js.map": "/Fanny-Chen-Digital-Portfolio/static/js/main.c904fd72.js.map"
   },
   "entrypoints": [
     "static/css/main.22d5efb7.css",
-    "static/js/main.8e541f11.js"
+    "static/js/main.c904fd72.js"
   ]
 }
