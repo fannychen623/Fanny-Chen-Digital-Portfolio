@@ -3,27 +3,36 @@
     height: fit-content;
     font-family: var(--font);
     color: var(--shade5);
-    background-color: var(--shade1);
-    border-bottom: 0.5vw solid var(--shade2);
-    padding-top: 1.25vh;
-    padding-bottom: 1.25vh;
+    background-color: var(--shade5);
+    border-bottom: 0.5vw solid var(--shade1);
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
 }
 
 /* link/icon color */
 .navBar button {
-    color: var(--shade5);
-    font-size: 1.75vw;
-    padding-top: 1vh;
+    color: var(--shade1);
+    font-size: 2rem;
+    padding: 2rem;
+}
+
+.navBar button:hover {
+    color: var(--shade4);
+    font-size: 1.5vw;
+}
+
+.navBar button svg {
+    margin-right: 0.5rem;
 }
 
 .navBar a {
-    color: rgb(11, 80, 164);
+    color: var(--shade5);
     font-size: 1.25vw;
     text-decoration: underline;
 }
 
 .navBar .css-7halv9 {
-    color: var(--shade4);
+    color: var(--shade5);
     font-size: 2vw;
     margin-right: 1vw;
 }

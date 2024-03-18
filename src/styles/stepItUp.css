@@ -1,0 +1,52 @@
+/* styling for the dietry page */
+
+/* define color palette */
+:root {
+    --pink1: #f9f6fb;
+    --pink2: #d0aecb;
+    --pink3: #9397cd;
+    --pink4: #494d7f;
+    --pink5: #1a1f67;
+}
+
+.global .stepItUp {
+	background: linear-gradient(0deg, var(--pink4), var(--pink3), var(--pink2), var(--pink1), var(--pink2), var(--pink3), var(--pink4));
+	background-size: 100%;
+	height: fit-content;
+}
+
+.stepItUp {
+    animation: 0.75s ease-in 0s 1 fadeIn;
+    margin-left: var(--leftMargin);
+    padding-left: var(--leftPad);
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+    color: var(--pink5);
+}
+
+.stepItUp img {
+    object-fit: scale-down;
+}
+
+/* list bullet icons */
+.stepItUp .css-rqaato {
+    font-size: 2rem;
+    margin-top: 0.25rem;
+}
+
+/* list bullet text */
+.stepItUp .css-9hpz1u {
+    font-size: 1.5rem;
+}
+
+/* buttons */
+.stepItUp .css-ez23ye {
+    font-size: 2rem;
+    padding: 2.25rem;
+    background-color: var(--pink4);
+    color: var(--pink1);
+}
+.stepItUp .css-ez23ye:hover {
+    background-color: var(--pink3);
+    color: var(--pink1);
+}

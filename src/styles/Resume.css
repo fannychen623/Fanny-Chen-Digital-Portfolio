@@ -1,25 +1,23 @@
 /* styling for the Resume page */
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
 @keyframes slideInFromBottom {
-    0% { transform: translateY(100%); }
+    0% { transform: translateY(40%); }
     100% { transform: translateY(0); }
 }
 
 .resume {
-    animation: 0.75s ease-in 0s 1 fadeIn, 0.75s ease-in 0s 1 slideInFromBottom;
-    padding: 5vh;
+    margin-left: var(--leftMargin);
+    padding-left: var(--leftPad);
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+    padding-right: 1rem;
 }
 
 .resume button {
-    position: relative;
-    left: 70vw;
-    padding: 1.5vw;
+    position: absolute;
+    right: 8%;
+    margin-top: -5rem;
     margin-bottom: 3vh;
-    background: none;
+    background: var(--trans);
     font-family: 'Quicksand', sans-serif;
     color: var(--shade4);
     font-size: 1.5vw;
@@ -27,17 +25,20 @@
 }
 
 .resume button:hover {
-    background: var(--shade2);
-    color: var(--shade1);
+    background: var(--trans);
+    color: var(--shade5);
 }
 
 .resume iframe {
-    width: 75vw;
+    animation: 0.5s ease-in 0s 1 slideInFromBottom;
+    width: 90%;
     height: 150vh;
     margin: auto;
 }
 
 .resume img {
+    animation: 0.5s ease-in 0s 1 fadeIn;
     width: 80%;
     margin: auto;
+    margin-top: 5rem;
 }

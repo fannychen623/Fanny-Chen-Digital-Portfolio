@@ -1,5 +1,6 @@
 /* styling for the Footer */
 .footer {
+    margin-left: var(--leftMargin);
     background-color: var(--shade1);
     color: var(--shade4);
     bottom: 0;

@@ -1,0 +1,53 @@
+/* styling for the dietry page */
+
+/* define color palette */
+:root {
+    --brown1: #f7eee4;
+    --brown2: #eecca5;
+    --brown3: #ba9367;
+    --brown4: #8d6435;
+    --brown5: #3b250d;
+}
+
+.global .shareAByte {
+	background: linear-gradient(0deg, var(--brown1), var(--brown2), var(--brown3), var(--brown4), var(--brown5));
+	background-size: 100%;
+	height: fit-content;
+}
+
+.shareAByte {
+    animation: 0.75s ease-in 0s 1 fadeIn;
+    margin-left: var(--leftMargin);
+    padding-left: var(--leftPad);
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+    color: var(--brown5);
+}
+
+.shareAByte img {
+    object-fit: scale-down;
+}
+
+/* list bullet icons */
+.shareAByte .css-rqaato {
+    font-size: 2rem;
+    margin-top: 0.25rem;
+}
+
+/* list bullet text */
+.shareAByte .css-9hpz1u {
+    font-size: 1.5rem;
+}
+
+/* buttons */
+.shareAByte .css-ez23ye {
+    font-size: 2rem;
+    padding: 2.25rem;
+    background-color: var(--brown3);
+    color: var(--brown1);
+    width: 100%;
+}
+.shareAByte .css-ez23ye:hover {
+    background-color: var(--brown4);
+    color: var(--brown1);
+}

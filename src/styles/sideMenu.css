@@ -1,0 +1,147 @@
+/* styling for the header/navigation bar */
+
+@keyframes slideInFromLeft {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+}
+
+.sideMenu {
+    animation: 0.5s ease-in 0s 1 slideInFromLeft;
+    height: 100vh;
+    width: 18.5%;
+    font-family: var(--font);
+    color: var(--shade1);
+    background-color: var(--shade5);
+    z-index: 1;
+    position: fixed;
+}
+
+html[menu='show'] .sideMenu {
+    margin-left: 0;
+}
+html[menu='hide'] .sideMenu {
+    margin-left: -14%;
+}
+
+/* stack */
+.sideMenu .css-tl3ftk {
+    width: 100%;
+    padding-top: 1.75rem;
+    align-items: start;
+}
+
+/* menu hide icon */
+.sideMenu .css-o8b1fj {
+    padding: 1rem;
+    padding-bottom: 2rem;
+    margin-right: 0.25rem;
+}
+.sideMenu .css-o8b1fj:hover {
+    color: var(--shade2);
+}
+
+/* menu icons */
+.sideMenu svg {
+    margin-right: 1.25rem;
+}
+
+/* arrow icon buttons */
+.sideMenu .css-15bt6gt {
+    color: var(--shade5);
+    padding-top: 2rem;
+    margin-right: -1rem;
+    position: absolute;
+    right: 0;
+}
+html[menu='hide'] .sideMenu .css-15bt6gt {
+    color: var(--trans);
+}
+
+.sideMenu button {
+    z-index: 100;
+    color: var(--shade1);
+    font-size: 2rem;
+    padding: 2rem;
+    margin-left: 2rem;
+    margin-right: 5rem;
+}
+
+.sideMenu button:hover {
+    background-color: var(--trans);
+}
+
+.sideMenu button:hover + .css-15bt6gt {
+    color: var(--shade1);
+}
+
+/* portfolio and contact accordian button */
+.sideMenu .css-17mg6aq {
+    border-color: var(--trans);
+    border-top-width: 0;
+    border-bottom-width: 0;
+}
+.sideMenu .css-uttm9k {
+    padding-left: 0;
+    padding-right: 0;
+}
+.sideMenu .css-uttm9k[aria-expanded="true"] {
+    padding-bottom: 1rem;
+}
+
+/* portfolio and contact accordian button */
+.sideMenu .css-17mg6aq:hover .css-15bt6gt {
+    color: var(--shade1);
+}
+/* portfolio and contact accordian button */
+html[menu='hide'] .sideMenu .css-17mg6aq:hover .css-15bt6gt {
+    color: var(--trans);
+}
+
+/* accordian button body icons */
+.sideMenu .css-ez23ye svg {
+    font-size: 2rem;
+    margin-right: 0;
+}
+
+/* accordian body dividers */
+.sideMenu .css-ez23ye:hover + .css-19ige00,
+.sideMenu .css-ez23ye:hover + .css-pch5jx,
+.sideMenu .css-ez23ye:hover + .css-yv9hk8,
+.sideMenu .css-ez23ye:hover + .css-i3zl91 {
+    border-color: var(--shade5);
+}
+
+/* portfolio and contact accordian body */
+.sideMenu #portfolio .chakra-collapse,
+.sideMenu .css-mxa4qn {
+    background-color: var(--shade3);
+    width: fit-content;
+    padding: 1rem 2rem 2rem 5rem;
+    position: absolute;
+    right: 0;
+}
+
+/* portfolio and contact body buttons */
+.sideMenu .css-160k7wa .css-ez23ye,
+.sideMenu .css-mxa4qn .css-ez23ye {
+    width: 100%;
+    justify-content: left;
+    font-size: 1.25rem;
+    background-color: var(--trans);
+    color: var(--shade1);
+}
+
+/* accordian body buttons */
+.sideMenu .css-mxa4qn .css-ez23ye:hover,
+.sideMenu .css-160k7wa .css-ez23ye:hover {
+    background-color: var(--trans);
+    color: var(--shade5);
+}
+
+/* portfolio dividers */
+.sideMenu #portfolio .css-yv9hk8,
+.sideMenu #portfolio .css-i3zl91 {
+    width: 85%;
+    margin-left: 3rem;
+    margin-right: 2rem;
+}

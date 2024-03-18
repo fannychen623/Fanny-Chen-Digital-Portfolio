@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'
 
 import {
-  BiDumbbell, BiLinkExternal,
-  BiMoviePlay, BiRestaurant,
-  BiRocket,
+  BiLeaf, BiDumbbell, BiLinkExternal,
+  BiMoviePlay, BiRestaurant, BiRocket,
 } from "react-icons/bi";
 
 // Import Swiper React components
@@ -28,16 +26,14 @@ import {
 } from 'swiper/modules';
 
 import {
-  List, ListItem, ListIcon, Box,
-  Grid, GridItem, Link,
-  Heading, Text, Stack, Image, Button,
+  Link, Heading, Text, Stack, 
+  List, ListItem, ListIcon,
+  Grid, GridItem, Image, Button,
   Modal, ModalOverlay, ModalContent,
-  ModalFooter, ModalBody,
-  ModalCloseButton, useDisclosure,
+  ModalBody, ModalCloseButton,
 } from '@chakra-ui/react'
 
 import mainProjects from '../mainProjects';
-// import projectModal from './projectModal';
 
 // function to import images
 function importAll(img) {
@@ -49,11 +45,9 @@ function importAll(img) {
 // defines images to call importAll function to import images
 const images = importAll(require.context('../assets/'), false, /\.(png|jpe?g|svg)$/);
 
-const icons = { BiDumbbell, BiRestaurant, BiRocket, };
+const icons = { BiLeaf, BiDumbbell, BiRestaurant, BiRocket };
 
 export default function Carousel() {
-
-  const { isOpen, onOpen, onClose } = useDisclosure()
 
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [modalData, setModalData] = useState(0);
@@ -126,7 +120,8 @@ export default function Carousel() {
                   {mainProjects[modalData].images.map((image) => (
                     <SwiperSlide key={image}>
                       <img src={images[`${image}`]} alt={image}
-                        onClick={() => { setShowFullscreenImage(true); setFullscreenImage(`${image}`) }} />
+                        // onClick={() => { setShowFullscreenImage(true); setFullscreenImage(`${image}`) }} 
+                      />
                     </SwiperSlide>
                   ))}
                 </Swiper>

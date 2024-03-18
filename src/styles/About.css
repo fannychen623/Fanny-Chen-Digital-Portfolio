@@ -1,10 +1,5 @@
 /* styling for the About page */
 
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
 @keyframes slideInFromBottom {
     0% { transform: translateY(100%); }
     100% { transform: translateY(0); }
@@ -20,9 +15,13 @@
 
 .about {
     animation: 0.75s ease-in 0s 1 fadeIn;
+    margin-left: var(--leftMargin);
+    padding-left: var(--leftPad);
+    padding-top: 4rem;
+    padding-right: 5rem;
+    padding-bottom: 3rem;
     color: var(--shade5);
     font-family: 'Quicksand', sans-serif;
-    padding: 5vh;
 }
 
 .about .css-fkqrqw{

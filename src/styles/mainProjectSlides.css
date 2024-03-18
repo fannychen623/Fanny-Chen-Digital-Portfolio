@@ -1,0 +1,73 @@
+
+.mainProjects .swiper {
+  width: 100%;
+  height: 50vh;
+  margin-bottom: 5rem;
+  box-shadow: -1px 0px 25px 5px rgba(10,50,91,0.35);
+}
+
+.verticalSlides .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.verticalSlides .swiper-slide img {
+  display: block;
+  width: auto;
+  height: 100%;
+}
+
+.verticalSlides .swiper-slide img:hover {
+  cursor: zoom-in;
+}
+
+.verticalSlides .swiper-button-next {
+  color: var(--shade1);
+  font-weight: bold;
+  text-shadow: var(--shade4) 3px 0 3px;
+  height: 100%;
+  margin-top: -30%;
+}
+
+.verticalSlides .swiper-button-prev {
+  color: var(--shade1);
+  font-weight: bold;
+  text-shadow: var(--shade4) 3px 0 3px;
+  height: 100%;
+  margin-top: -30%;
+}
+
+.verticalSlides .swiper-pagination-bullet {
+  outline: 2px solid white;
+}
+
+/* fullsceen image */
+#mainProjectFullscreenImage {
+  z-index: -1;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 91vh;
+  cursor: zoom-out;
+}
+
+/* fullscreen nav buttons */
+#fullScreenNavBack, #fullScreenNavForward {
+  background-color: var(--trans);
+  color: var(--shade1);
+  font-size: 10rem;
+  z-index: 1;
+  position: fixed;
+  top: 50%;
+}
+#fullScreenNavBack:hover, #fullScreenNavForward:hover {
+  color: var(--shade2);
+}
+
+#fullScreenNavBack{
+  left: 5%;
+}
+#fullScreenNavForward{
+  right: 5%;
+}

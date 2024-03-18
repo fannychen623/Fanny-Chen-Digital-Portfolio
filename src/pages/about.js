@@ -109,7 +109,7 @@ export default function About() {
                   </ListItem>
                   <ListItem>
                     <ListIcon as={AiTwotoneCloud} color='var(--shade3)' fontSize='1.5vw' m='0' mr='1vw' />
-                    Has dreams to travel the world but only ventured to Italy, Switzerland, France, England, Canda, China, Mexico, and Korea thus far.
+                    Has dreams to travel the world but only ventured to Italy, Switzerland, France, England, Canda, China, Mexico, Iceland, and Korea thus far.
                   </ListItem>
                   <ListItem>
                     <ListIcon as={AiTwotoneCloud} color='var(--shade3)' fontSize='1.5vw' m='0' mr='1vw' />

@@ -1,0 +1,45 @@
+/* styling for the mainProjects page */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.mainProjects {
+    animation: 0.5s ease-in 0s 1 fadeIn;
+    margin-left: var(--leftMargin);
+    padding-left: var(--leftPad);
+    color: var(--shade5);
+    font-family: 'Quicksand', sans-serif;
+    padding-top: 3rem;
+    padding-right: 5rem;
+    white-space: pre-line;
+}
+
+#mainProjectHeading {
+    font-size: 3vw;
+    font-weight: bold;
+    color: var(--shade4);
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.mainProjects .css-vxx3s4 p {
+    font-size: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    width: 100%;
+    text-align: center;
+    border: 1px solid var(--shade5);
+    margin-bottom: 0;
+}
+
+/* view details button */
+.mainProjects .css-ez23ye {
+    font-size: 1.5rem;
+    padding: 2rem;
+    color: var(--shade1);
+    background-color: var(--shade5);
+}
+.mainProjects .css-ez23ye:hover {
+    background-color: var(--shade4);
+}

@@ -2,8 +2,50 @@
 
 const mainProjects = [
   {
+    title: 'Dietry',
+    summary: 'A web application (+ mobile interface) where users can add foods, create unique meals, track their daily diet, weight, and macronutritions.',
+    features: [
+      'Create an account to keep track of progess.',
+      'Create/update profile to calculate BMR macronutrition.',
+      'Add/update custom foods or fetch from the USDA API',
+      'Add/update unique meals to add to daily diet',
+      'Add and track weight over time',
+      'View/track progress over specific date ranges in dynamic graphs.',
+      'Convert weight and energy units for easy tracking',
+      'Pick different themes for a personalized interface'
+    ],
+    icon: 'BiLeaf',
+    thumbnail: 'dietry/login.png',
+    images: [
+      'dietry/login.png',
+      'dietry/homepage.png',
+      'dietry/profile.png',
+      'dietry/search.png',
+      'dietry/foods.png',
+      'dietry/meals.png',
+      'dietry/modifyMeal.png',
+      'dietry/calendar.png',
+      'dietry/progress.png',
+      'dietry/signup.png',
+      'dietry/theme1.png',
+      'dietry/theme2.png',
+      'dietry/mobileLogin.png',
+      'dietry/mobileFoods.png',
+      'dietry/mobileViewFood.png',
+      'dietry/mobileModifyFood.png',
+      'dietry/mobileMeals.png',
+      'dietry/mobileModifyMeal.png',
+      'dietry/mobileCalendar.png',
+      'dietry/mobileProfile.png',
+      'dietry/mobileMenu.png',
+      'dietry/mobileConverter.png',
+    ],
+    video: '',
+    repository: 'https://github.com/fannychen623/diet-planner',
+  },
+  {
     title: 'Step It Up',
-    summary: 'A web application where users can create, track, and share their workout routines.',
+    summary: 'A web application where users can create and check off completing their unique workout routines. Users can post and share their progress.',
     features: [
       'Create an account to keep track of progess.',
       'Create/update profile to calculate maintanence calorie.',
@@ -36,7 +78,7 @@ const mainProjects = [
   },
   {
     title: 'Share A Byte',
-    summary: 'A web application where users can create and share unique recipes.',
+    summary: 'A web application where users can create, share, and favorite unique recipes. Use OpenAI to make creating unique recipes simple and fun.',
     features: [
       'Create and account for personal record keeping',
       'View/navigate through recipes on an interactive recipe book style catalog page',
@@ -66,7 +108,7 @@ const mainProjects = [
   },
   {
     title: 'GIF Me MARVEL',
-    summary: 'A web application where users can lookup and browse through GIFs of MARVEL characters.',
+    summary: 'A web application where users can lookup, browse, and favorite their favorite MARVEL characters an related GIFs.',
     features: [
       'Search for specific MARVEL characters.',
       'Navigate to a characters official MARVEL page.',

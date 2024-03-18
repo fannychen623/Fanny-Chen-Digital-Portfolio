@@ -1,9 +1,7 @@
 // import package and local style sheet
 import React from 'react';
 
-import {
-  Text, Box,
-} from '@chakra-ui/react'
+import { Text, Box } from '@chakra-ui/react'
 
 import '../styles/footer.css';
 

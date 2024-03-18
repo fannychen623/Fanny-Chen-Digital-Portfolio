@@ -1,0 +1,53 @@
+/* styling for the dietry page */
+
+/* define color palette */
+:root {
+    --red1: #fff5f5;
+    --red2: #eebaba;
+    --red3: #ef6d6d;
+    --red4: #b63838;
+    --red5: #600e0e;
+}
+
+.global .gifMeMarvel {
+	background: linear-gradient(0deg, var(--red1), var(--red4), var(--red5), var(--red5), var(--red5));
+	background-size: 100%;
+	height: fit-content;
+}
+
+.gifMeMarvel {
+    animation: 0.75s ease-in 0s 1 fadeIn;
+    margin-left: var(--leftMargin);
+    padding-left: var(--leftPad);
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+    color: var(--red5);
+}
+
+.gifMeMarvel img {
+    object-fit: scale-down;
+}
+
+/* list bullet icons */
+.gifMeMarvel .css-rqaato {
+    font-size: 2rem;
+    margin-top: 0.25rem;
+}
+
+/* list bullet text */
+.gifMeMarvel .css-9hpz1u {
+    font-size: 1.5rem;
+}
+
+/* buttons */
+.gifMeMarvel .css-ez23ye {
+    font-size: 2rem;
+    padding: 2.25rem;
+    background-color: var(--red1);
+    color: var(--red4);
+    width: 100%;
+}
+.gifMeMarvel .css-ez23ye:hover {
+    background-color: var(--red2);
+    color: var(--red5);
+}

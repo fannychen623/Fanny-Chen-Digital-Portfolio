@@ -1,0 +1,61 @@
+/* styling for the dietry page */
+
+/* define color palette */
+:root {
+    --green1: #f5fffa;
+    --green2: #5ba580;
+    --green3: #307854;
+    --green4: #145233;
+    --green5: #05391f;
+}
+
+.global .dietry {
+	background: linear-gradient(180deg, var(--green1), var(--green2), var(--green3), var(--green4), var(--green5));
+	background-size: 100%;
+	height: fit-content;
+}
+
+.dietry {
+    animation: 0.75s ease-in 0s 1 fadeIn;
+    margin-left: var(--leftMargin);
+    padding-left: var(--leftPad);
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+    color: var(--green5);
+}
+
+.dietry img {
+    object-fit: scale-down;
+}
+
+/* list bullet icons */
+.dietry .css-rqaato {
+    font-size: 2rem;
+    margin-top: 0.25rem;
+}
+
+/* list bullet text */
+.dietry .css-9hpz1u {
+    font-size: 1.5rem;
+}
+
+/* buttons */
+.dietry .css-ez23ye {
+    font-size: 2rem;
+    padding: 2.25rem;
+    background-color: var(--green4);
+    color: var(--green1);
+}
+.dietry .css-ez23ye:hover {
+    background-color: var(--green5);
+    color: var(--green1);
+}
+
+/* mobile interface caption */
+.dietry #mobileCaption {
+    transform: rotate(90deg) scale(400%);
+    white-space: nowrap;
+    font-size: 1rem;
+    margin-top: 25rem;
+    color: var(--green1);
+}

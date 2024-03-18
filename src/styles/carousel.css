@@ -20,7 +20,7 @@
 
 .mainCarousel .swiper-slide img:hover {
   transition: all 150ms ease-in;
-  border: 5px solid white;
+  border: 5px solid var(--shade4);
   border-radius: 30px;
   cursor: pointer;
 }
@@ -45,7 +45,7 @@
 }
 
 .mainCarousel .swiper-pagination {
-  padding-bottom: 1.5vh;
+  padding-bottom: 3.5rem;
 }
 
 .mainCarousel .swiper-pagination-bullet {
@@ -60,14 +60,15 @@
 #carouselCaption {
   text-align: center;
   font-size: 1.3vw;
-  color: var(--shade1);
+  color: var(--shade5);
   padding-top: 1.5vh;
 }
 
 .carouselTop,
 .carouselTop .swiper {
-  height: auto;
   width: 100%;
+  max-height: 450px;
+  max-width: 100%;
 }
 
 .carouselTop .swiper-slide {
@@ -82,9 +83,9 @@
 
 .carouselTop .swiper-slide img {
   display: block;
-  width: 100%;
-  height: auto;
-  cursor: zoom-in;
+  width: auto;
+  height: 450px;
+  /* cursor: zoom-in; */
 }
 
 .carouselTop .swiper-button-prev {
@@ -98,7 +99,7 @@
 }
 
 .carouselBottom .swiper {
-  width: 100%;
+  width: auto;
   height: 300px;
 }
 
@@ -125,8 +126,8 @@
 
 .carouselBottom .swiper-slide img {
   display: block;
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: 100px;
   object-fit: cover;
 }
 
@@ -141,8 +142,10 @@
   top: 3vh;
   left: 5vw;
   z-index: 100;
-  width: 90vw;
+  width: auto;
+  max-width: 90vw;
   height: auto;
+  max-height: 95vh;
   cursor: zoom-out;
 }
 

@@ -1,26 +1,19 @@
 // import package and local style sheet
 import React, { useState } from 'react';
-import ImageGallery from 'react-image-gallery';
 
 // import projects that will populate the portfolio page
 import projects from '../miniProjects';
-import mainProjects from '../mainProjects';
 
 import Carousel from '../components/carousel';
 
 import {
-  List, ListItem, ListIcon, Box,
-  Grid, GridItem, AspectRatio, Switch,
-  Heading, Text, Stack, Image, Button,
+  Box, Grid, GridItem, Button,
+  Link, Switch, Text, Image,
   Accordion, AccordionItem, AccordionButton,
-  AccordionPanel, AccordionIcon, useDisclosure, Link,
+  AccordionPanel, AccordionIcon,
 } from '@chakra-ui/react'
 
-import {
-  BiDumbbell, BiLinkExternal,
-  BiMoviePlay, BiRestaurant,
-  BiRocket,
-} from "react-icons/bi";
+import { BiLinkExternal } from "react-icons/bi";
 
 import '../styles/portfolio.css';
 
@@ -69,65 +62,74 @@ export default function Portfolio() {
 
   return (
     <Box className="portfolio">
-      <Box>
+      <Box alignItems='center'>
         <Text id='projectHeading'>MAIN PROJECTS</Text>
         <Carousel />
       </Box>
-      <Text fontSize='2.5vw' fontWeight='bold' color='white' textAlign='center' mt='10vh' mb='5vh'>MINI PROJECTS</Text>
+      <Text id='miniProjectHeading'>MINI PROJECTS</Text>
       <Box textAlign='end'>
-        <Switch size='lg' pb='1.25vh' color='white' fontSize='1.5vw'
+        <Switch size='lg' pb='1.25vh' color='var(--shade5)' fontSize='1.5vw'
           onChange={(e) => { if (e.target.checked) { setExpandedItems(projectLength) } else { setExpandedItems([]) } }}
         >
           Expand All
         </Switch>
       </Box>
-      <Accordion allowMultiple index={expandedItems}>
+      <Accordion allowMultiple index={expandedItems} pb='5rem'>
         {projects.map((project, index) => (
-          <AccordionItem key={index} onClick={(e) => { setExpandedItems(expandedIndex(e.target.getAttribute('data-index'), expandedItems)) }}>
-            <AccordionButton color='white' p='2vh'
-              _expanded={{ bg: 'var(--shade1)', color: 'var(--shade4)', fontWeight: 'bold', }}
-              _hover={{ bg: 'var(--shade1)', color: 'var(--shade4)', fontWeight: 'bold', }}
-            >
-              <Box as="span" flex='1' textAlign='left' fontSize='1.5vw' id={`${index}`}
-                onClick={(e) => { setExpandedItems(expandedIndex(e.target.id, expandedItems)) }}
-              >
-                {`${project.name}`}
-              </Box>
-              <AccordionIcon fontSize='1.5vw' color='white' />
-            </AccordionButton>
-            <AccordionPanel _hover={{ bg: 'var(--shade4)' }} px='1vw'>
-              <Grid templateColumns='repeat(10, 1fr)' gap='4' py='2vh'>
-                <GridItem colSpan='2' >
-                  <Image
-                    src={images[`${project.image}`]}
-                    alt={`${project.name}`}
-                    borderRadius='lg'
-                  />
-                </GridItem>
-                <GridItem colSpan='6' my='auto' pl='2vw'>
-                  <Text fontSize='1.25vw' color='white'><b>Description:</b> {`${project.description}\n\n`}</Text>
-                  <Text fontSize='1.25vw' color='white'><b>Tools Used:</b> {`${project.tools}`}</Text>
-                </GridItem>
-                <GridItem colSpan='2' my='auto' textAlign='right'>
-                  <Link as='a' target="_blank" href={`${project.link}`}>
-                    <Button
-                      fontSize='2xl'
-                      p='1.5vw'
-                      variant='solid'
-                      backgroundColor='var(--shade1)'
-                      color='var(--shade4)'
-                      leftIcon={<BiLinkExternal />}
-                      _hover={{
-                        background: 'var(--shade3)',
-                        color: 'white',
-                      }}
-                    >
-                      View Repository
-                    </Button>
-                  </Link>
-                </GridItem>
-              </Grid>
-            </AccordionPanel>
+          <AccordionItem key={index} 
+            onClick={(e) => { setExpandedItems(expandedIndex(e.target.getAttribute('data-index'), expandedItems)) }}>
+            {({ isExpanded }) => (
+              <>
+                <AccordionButton color='var(--shade5)' p='2vh'
+                  _expanded={{ bg: 'var(--shade4)', color: 'var(--shade1)', fontWeight: 'bold', }}
+                  _hover={{ bg: 'var(--shade4)', color: 'var(--shade1)', fontWeight: 'bold', }}
+                >
+                  <Box as="span" flex='1' textAlign='left' fontSize='1.5vw' id={`${index}`}
+                    onClick={(e) => { setExpandedItems(expandedIndex(e.target.id, expandedItems)) }}
+                  >
+                    {`${project.name}`}
+                  </Box>
+                  {isExpanded ? (
+                    <AccordionIcon fontSize='1.5vw' color='var(--shade1)' />
+                  ) : (
+                    <AccordionIcon fontSize='1.5vw' color='var(--shade5)' />
+                  )}
+                </AccordionButton>
+                <AccordionPanel _hover={{ bg: 'var(--shade2)' }} px='1vw'>
+                  <Grid templateColumns='repeat(10, 1fr)' gap='4' py='2vh'>
+                    <GridItem colSpan='2' >
+                      <Image
+                        src={images[`${project.image}`]}
+                        alt={`${project.name}`}
+                        borderRadius='lg'
+                      />
+                    </GridItem>
+                    <GridItem colSpan='6' my='auto' pl='2vw' fontSize='1.25vw' color='var(--shade5)'>
+                      <Text><b>Description:</b> {`${project.description}\n\n`}</Text>
+                      <Text><b>Tools Used:</b> {`${project.tools}`}</Text>
+                    </GridItem>
+                    <GridItem colSpan='2' my='auto' textAlign='right'>
+                      <Link as='a' target="_blank" href={`${project.link}`}>
+                        <Button
+                          fontSize='2xl'
+                          p='1.5vw'
+                          variant='solid'
+                          backgroundColor='var(--shade4)'
+                          color='var(--shade1)'
+                          leftIcon={<BiLinkExternal />}
+                          _hover={{
+                            background: 'var(--shade3)',
+                            color: 'var(--shade1)',
+                          }}
+                        >
+                          View Repository
+                        </Button>
+                      </Link>
+                    </GridItem>
+                  </Grid>
+                </AccordionPanel>
+              </>
+            )}
           </AccordionItem>
         ))}
       </Accordion>
