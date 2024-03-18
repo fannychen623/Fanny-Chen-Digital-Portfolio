@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Fanny-Chen-Digital-Portfolio/static/css/main.7ba97c21.css",
+    "main.css": "/Fanny-Chen-Digital-Portfolio/static/css/main.d3bfc1b9.css",
     "main.js": "/Fanny-Chen-Digital-Portfolio/static/js/main.0e4a2043.js",
     "static/media/MY FAVORITE GIFS.gif": "/Fanny-Chen-Digital-Portfolio/static/media/MY FAVORITE GIFS.8505493eefad2e0116a7.gif",
     "static/media/Character Page.gif": "/Fanny-Chen-Digital-Portfolio/static/media/Character Page.8334a332ecb8d3b19224.gif",
@@ -106,11 +106,11 @@
     "static/media/glyphicons-halflings-regular.eot": "/Fanny-Chen-Digital-Portfolio/static/media/glyphicons-halflings-regular.5be1347c682810f199c7.eot",
     "static/media/glyphicons-halflings-regular.woff2": "/Fanny-Chen-Digital-Portfolio/static/media/glyphicons-halflings-regular.be810be3a3e14c682a25.woff2",
     "index.html": "/Fanny-Chen-Digital-Portfolio/index.html",
-    "main.7ba97c21.css.map": "/Fanny-Chen-Digital-Portfolio/static/css/main.7ba97c21.css.map",
+    "main.d3bfc1b9.css.map": "/Fanny-Chen-Digital-Portfolio/static/css/main.d3bfc1b9.css.map",
     "main.0e4a2043.js.map": "/Fanny-Chen-Digital-Portfolio/static/js/main.0e4a2043.js.map"
   },
   "entrypoints": [
-    "static/css/main.7ba97c21.css",
+    "static/css/main.d3bfc1b9.css",
     "static/js/main.0e4a2043.js"
   ]
 }
