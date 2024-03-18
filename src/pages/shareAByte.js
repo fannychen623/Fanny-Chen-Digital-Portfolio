@@ -1,5 +1,5 @@
 // import package and local style sheet
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import {
   Box, Grid, GridItem, SimpleGrid, 
@@ -27,6 +27,10 @@ const images = importAll(require.context('../assets/shareAByte'), false, /\.(png
 const icons = { BiRestaurant, BiTerminal, BiCoffee };
 
 export default function ShareAByte() {
+
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  },[])
 
   return (
     <Box className="shareAByte">

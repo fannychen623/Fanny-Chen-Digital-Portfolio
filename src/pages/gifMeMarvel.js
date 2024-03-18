@@ -1,5 +1,5 @@
 // import package and local style sheet
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import {
   Box, Grid, GridItem, SimpleGrid,
@@ -27,6 +27,10 @@ const images = importAll(require.context('../assets/gifMeMarvel'), false, /\.(pn
 const icons = { BiRocket, BiTerminal };
 
 export default function GifMeMarvel() {
+
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  },[])
 
   return (
     <Box className="gifMeMarvel">

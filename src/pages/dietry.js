@@ -1,5 +1,5 @@
 // import package and local style sheet
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import {
   Box, Grid, GridItem, SimpleGrid, Button,
@@ -26,6 +26,10 @@ const images = importAll(require.context('../assets/dietry'), false, /\.(png|jpe
 const icons = { BiLeaf, BiTerminal };
 
 export default function Dietry() {
+
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  },[])
 
   return (
     <Box className="dietry">

@@ -1,5 +1,5 @@
 // import package and local style sheet
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import {
   Card, CardHeader, CardBody,
@@ -15,6 +15,11 @@ import '../styles/about.css';
 import Avatar from '../assets/images/Avatar.JPG';
 
 export default function About() {
+
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  },[])
+  
   return (
     <Box className="about">
       {/* section of avatar with general summary */}

@@ -159,7 +159,7 @@ export default function Carousel() {
                 </Stack>
               </GridItem>
               <GridItem rowSpan={1} colSpan={4} my='2vh' display='flex' justifyContent='space-between'>
-                <Link as='a' href={`${mainProjects[modalData].title.replace(/ /g,"-").toLowerCase()}`}>
+                <Link as='a' href={'#/' + `${mainProjects[modalData].title.replace(/ /g,"-").toLowerCase()}`}>
                   <Button
                     fontSize='2xl'
                     p='1.5vw'

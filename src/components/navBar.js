@@ -25,23 +25,23 @@ function NavTabs() {
     <div className='navBar' >
       <Flex>
         <Box width='50vw' display='flex' >
-          <Link to='/Fanny-Chen-Digital-Portfolio'>
+          <Link to='#/Fanny-Chen-Digital-Portfolio'>
             <Button leftIcon={<AiOutlineHome />} variant='ghost' >Home</Button>
           </Link>
-          <Link to='/portfolio'>
+          <Link to='#/portfolio'>
             <Button leftIcon={<AiOutlineFolder />} variant='ghost' >Portfolio</Button>
           </Link>
-          {/* <Link to='/'>
+          {/* <Link to='#/'>
             <Tooltip hasArrow label='Developer Skills' fontSize='1vw' mt='1vh' bg='var(--shade5)' color='white'>
               <IconButton variant='link' ml='2vw' aria-label='Developer Skills' icon={<AiOutlineCode />} />
             </Tooltip>
           </Link> */}
         </Box>
         <Box width='50vw' textAlign='end' pr='5'>
-          <Link to='/resume'>
+          <Link to='#/resume'>
             <Button leftIcon={<AiOutlineSolution />} variant='ghost' >Resume</Button>
           </Link>
-          <Link to='/about'>
+          <Link to='#/about'>
             <Button leftIcon={<AiOutlineUser />} variant='ghost' >About</Button>
           </Link>
           <Menu>

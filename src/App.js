@@ -1,6 +1,6 @@
 // import package and local component
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 // import local components
 import SideMenu from "./components/sideMenu";
@@ -23,10 +23,10 @@ import './styles/global.css';
 function App() {
 
   return (
-    <Router>
+    <Router basename="/">
       <div className="global">
         <Routes>
-          <Route path="/Fanny-Chen-Digital-Portfolio" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<><SideMenu /><About /><Footer /></>} />
           <Route path="/portfolio" element={<><SideMenu /><Portfolio /><Footer /></>}/>
           <Route path="/main-projects" element={<><SideMenu /><MainProjects /><Footer /></>}/>

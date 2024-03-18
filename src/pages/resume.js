@@ -1,5 +1,5 @@
 // import package and local style sheet
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import {
   Button, Box, Image, Spinner, Text
@@ -14,6 +14,10 @@ import { AiOutlinePrinter, AiOutlineDownload } from "react-icons/ai";
 import '../styles/resume.css';
 
 export default function Resume() {
+
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  },[])
 
   const [loaded, setLoaded] = useState(false)
   const [pdfViewer, setPdfViewer] = useState(false)

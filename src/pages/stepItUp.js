@@ -1,5 +1,5 @@
 // import package and local style sheet
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import {
   Box, Grid, GridItem, Button,
@@ -27,6 +27,10 @@ const images = importAll(require.context('../assets/stepItUp'), false, /\.(png|j
 const icons = { BiDumbbell, BiTerminal };
 
 export default function StepItUp() {
+
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  },[])
 
   return (
     <Box className="stepItUp">

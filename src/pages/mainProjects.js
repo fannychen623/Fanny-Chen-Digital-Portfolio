@@ -1,5 +1,5 @@
 // import package and local style sheet
-import React from 'react';
+import React, { useEffect } from 'react';
 
 // import projects that will populate the portfolio page
 import mainProjects from '../mainProjects';
@@ -16,6 +16,10 @@ import { BiLinkExternal } from "react-icons/bi";
 import '../styles/mainProjects.css';
 
 export default function MainProjects() {
+
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  },[])
 
   return (
     <Box className="mainProjects">
@@ -68,7 +72,7 @@ export default function MainProjects() {
           <Stack>
             <Heading size='xlg' color='var(--shade5)'>{`${mainProjects[0].title}`}{'\n'}</Heading>
             <Text fontSize='3xl' mb='3vh'>{`${mainProjects[0].summary}`}</Text>
-            <Link as='a' href={'/dietry'}>
+            <Link as='a' href={'#/dietry'}>
               <Button leftIcon={<BiLinkExternal />} >
                 More Details
               </Button>
@@ -79,7 +83,7 @@ export default function MainProjects() {
           <Stack>
             <Heading size='xlg' color='var(--shade5)'>{`${mainProjects[1].title}`}{'\n'}</Heading>
             <Text fontSize='3xl' mb='3vh'>{`${mainProjects[1].summary}`}</Text>
-            <Link as='a' href={'/step-it-up'}>
+            <Link as='a' href={'#/step-it-up'}>
               <Button leftIcon={<BiLinkExternal />} >
                 More Details
               </Button>
@@ -96,7 +100,7 @@ export default function MainProjects() {
           <Stack>
             <Heading size='xlg' color='var(--shade5)'>{`${mainProjects[2].title}`}{'\n'}</Heading>
             <Text fontSize='3xl' mb='3vh'>{`${mainProjects[2].summary}`}</Text>
-            <Link as='a' href={'/share-a-byte'}>
+            <Link as='a' href={'#/share-a-byte'}>
               <Button leftIcon={<BiLinkExternal />} >
                 More Details
               </Button>
@@ -107,7 +111,7 @@ export default function MainProjects() {
           <Stack>
             <Heading size='xlg' color='var(--shade5)'>{`${mainProjects[3].title}`}{'\n'}</Heading>
             <Text fontSize='3xl' mb='3vh'>{`${mainProjects[3].summary}`}</Text>
-            <Link as='a' href={'/gif-me-marvel'}>
+            <Link as='a' href={'#/gif-me-marvel'}>
               <Button leftIcon={<BiLinkExternal />} >
                 More Details
               </Button>

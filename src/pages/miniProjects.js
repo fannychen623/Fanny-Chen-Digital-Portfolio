@@ -1,5 +1,5 @@
 // import package and local style sheet
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 // import projects that will populate the portfolio page
 import projects from '../miniProjects';
@@ -26,6 +26,10 @@ function importAll(img) {
 const images = importAll(require.context('../assets/images'), false, /\.(png|jpe?g|svg)$/);
 
 export default function MiniProjects() {
+
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  },[])
 
   const [expandedItems, setExpandedItems] = useState([])
 
