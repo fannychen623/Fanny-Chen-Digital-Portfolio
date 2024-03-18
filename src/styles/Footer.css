@@ -1,11 +1,25 @@
 /* styling for the Footer */
 .footer {
-    margin-left: var(--leftMargin);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: var(--shade1);
-    color: var(--shade4);
-    bottom: 0;
-    padding: 1vh 2vh 0vh 2vh;
+    color: var(--shade5);
     height: fit-content;
-    text-align: center;
+    width: 100%;
     white-space: pre-line;
+    position: absolute;
+    bottom: 0;
+}
+
+html[menu='show'] .footer {
+    margin-left: 0;
+    padding-left: 20%;
+    padding-right: 1%;
+}
+
+html[menu='hide'] .footer {
+    margin-left: var(--leftMargin);
+    padding-left: var(--leftPad);
+    padding-right: 2rem;
 }

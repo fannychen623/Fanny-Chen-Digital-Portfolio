@@ -1,5 +1,5 @@
 // import package and local style sheet
-import React, { useState } from 'react';
+import React from 'react';
 
 // import projects that will populate the portfolio page
 import mainProjects from '../mainProjects';
@@ -19,7 +19,7 @@ export default function MainProjects() {
 
   return (
     <Box className="mainProjects">
-      <Text id='mainProjectHeading'>PROJECTS</Text>
+      <Heading id='mainProjectHeading'>PROJECTS</Heading>
       <Stack maxW='100%' gap={0} mb='5rem' border='1px solid var(--shade5)'>
         <SimpleGrid col={8} display='flex' whiteSpace='pre' w='100%'>
           <Text textAlign='left' bg='var(--shade5)' color='var(--shade1)'><b>Skills / Tools</b></Text>

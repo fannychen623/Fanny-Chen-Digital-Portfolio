@@ -113,7 +113,7 @@ export default function MainProjectSlides({ projectIndex }) {
         static={false}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className="verticalSlides"
+        className="horizontalSlides"
       >
         {mainProjects[projectIndex].images.map((image, index) => (
           <SwiperSlide key={index}>

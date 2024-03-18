@@ -4,8 +4,6 @@ import React, { useState } from 'react';
 // import projects that will populate the portfolio page
 import projects from '../miniProjects';
 
-import Carousel from '../components/carousel';
-
 import {
   Box, Grid, GridItem, Button,
   Link, Switch, Text, Image,

@@ -20,12 +20,35 @@ import {
 import {
   IoScaleOutline, IoFitnessOutline, IoRestaurantOutline, 
   IoRocketOutline, IoTerminalOutline, IoFileTrayStackedOutline, 
-  IoGridOutline
+  IoGridOutline, IoArrowUpOutline
 } from "react-icons/io5";
 
 
 // import local style sheet
 import '../styles/sideMenu.css';
+
+// show scroll to top button when paged is scrolled past 40px
+window.onscroll = function () { scrollFunction() };
+
+function scrollFunction() {
+  let scrollTopButton = document.getElementById('scroll-top');
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    if (document.body.clientWidth > 820) {
+      scrollTopButton.style.visibility = 'visible';
+    }
+  } else {
+    if (document.body.clientWidth > 820) {
+      scrollTopButton.style.visibility = 'hidden';
+    }
+  }
+}
+
+// function to scroll to the top of the page
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
 
 // page navigation bar
 function SideMenu() {
@@ -215,6 +238,7 @@ function SideMenu() {
           </AccordionItem>
         </Accordion>
       </VStack>
+      <IconButton id='scroll-top' icon={<IoArrowUpOutline />} onClick={topFunction} />
     </Box>
   );
 }

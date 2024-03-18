@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import {
   BiLeaf, BiDumbbell, BiLinkExternal,
-  BiMoviePlay, BiRestaurant, BiRocket,
+  BiLogoGithub, BiRestaurant, BiRocket,
 } from "react-icons/bi";
 
 // Import Swiper React components
@@ -159,7 +159,7 @@ export default function Carousel() {
                 </Stack>
               </GridItem>
               <GridItem rowSpan={1} colSpan={4} my='2vh' display='flex' justifyContent='space-between'>
-                <Link as='a' target="_blank" href={`${mainProjects[modalData].video}`}>
+                <Link as='a' href={`${mainProjects[modalData].title.replace(/ /g,"-").toLowerCase()}`}>
                   <Button
                     fontSize='2xl'
                     p='1.5vw'
@@ -167,13 +167,13 @@ export default function Carousel() {
                     variant='solid'
                     backgroundColor='var(--shade4)'
                     color='white'
-                    leftIcon={<BiMoviePlay />}
+                    leftIcon={<BiLinkExternal />}
                     _hover={{
-                      background: 'var(--shade1)',
-                      color: 'var(--shade4)',
+                      background: 'var(--shade5)',
+                      color: 'var(--shade1)',
                     }}
                   >
-                    Watch Video
+                    More Details
                   </Button>
                 </Link>
                 <Link as='a' target="_blank" href={`${mainProjects[modalData].repository}`}>
@@ -184,10 +184,10 @@ export default function Carousel() {
                     variant='solid'
                     backgroundColor='var(--shade4)'
                     color='white'
-                    leftIcon={<BiLinkExternal />}
+                    leftIcon={<BiLogoGithub />}
                     _hover={{
-                      background: 'var(--shade1)',
-                      color: 'var(--shade4)',
+                      background: 'var(--shade5)',
+                      color: 'var(--shade1)',
                     }}
                   >
                     View Repository

@@ -3,7 +3,6 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // import local components
-import NavTabs from "./components/navBar";
 import SideMenu from "./components/sideMenu";
 import Footer from "./components/footer";
 import Home from "./pages/home";
