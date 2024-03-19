@@ -1,6 +1,6 @@
 // import package and local component
 import React from "react";
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 
 // import local components
 import SideMenu from "./components/sideMenu";
@@ -26,16 +26,17 @@ function App() {
     <Router basename="/">
       <div className="global">
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<><SideMenu /><About /><Footer /></>} />
-          <Route path="/portfolio" element={<><SideMenu /><Portfolio /><Footer /></>}/>
-          <Route path="/main-projects" element={<><SideMenu /><MainProjects /><Footer /></>}/>
-          <Route path="/mini-projects" element={<><SideMenu /><MiniProjects /><Footer /></>}/>
-          <Route path="/dietry" element={<><SideMenu /><Dietry /><Footer /></>}/>
-          <Route path="/step-it-up" element={<><SideMenu /><StepItUp /><Footer /></>}/>
-          <Route path="/share-a-byte" element={<><SideMenu /><ShareAByte /><Footer /></>}/>
-          <Route path="/gif-me-marvel" element={<><SideMenu /><GifMeMarvel /><Footer /></>}/>
-          <Route path="/resume" element={<><SideMenu /><Resume /><Footer /></>} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/about" element={<><SideMenu /><About /><Footer /></>} />
+            <Route path="/portfolio" element={<><SideMenu /><Portfolio /><Footer /></>} />
+            <Route path="/main-projects" element={<><SideMenu /><MainProjects /><Footer /></>} />
+            <Route path="/mini-projects" element={<><SideMenu /><MiniProjects /><Footer /></>} />
+            <Route path="/dietry" element={<><SideMenu /><Dietry /><Footer /></>} />
+            <Route path="/step-it-up" element={<><SideMenu /><StepItUp /><Footer /></>} />
+            <Route path="/share-a-byte" element={<><SideMenu /><ShareAByte /><Footer /></>} />
+            <Route path="/gif-me-marvel" element={<><SideMenu /><GifMeMarvel /><Footer /></>} />
+            <Route path="/resume" element={<><SideMenu /><Resume /><Footer /></>} />
+          <Route path="/*" element={<Navigate to="/home" />} />
         </Routes>
       </div>
     </Router>

@@ -2,7 +2,7 @@
   "name": "fanny-chen-digital-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://fannychen623.github.io/#/Fanny-Chen-Digital-Portfolio",
+  "homepage": "https://fannychen623.github.io/Fanny-Chen-Digital-Portfolio",
   "dependencies": {
     "@chakra-ui/react": "^2.5.5",
     "bootstrap": "^3.4.1",
